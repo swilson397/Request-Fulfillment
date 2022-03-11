@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="x_58056_rf_request_fulfillment" relationship="" sys_domain="global" table="x_58056_rf_activity" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>definition</element>
+            <list_id display_value="x_58056_rf_activity" element="NULL" name="x_58056_rf_activity" parent="x_58056_rf_request_fulfillment" relationship="NULL" sys_domain="global" view="Default view">4f4e47eb2fcdc55448dca1fef699b616</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-01-21 00:45:55</sys_created_on>
+            <sys_id>8b4e47eb2fcdc55448dca1fef699b617</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-01-21 00:45:55</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>order</element>
+            <list_id display_value="x_58056_rf_activity" element="NULL" name="x_58056_rf_activity" parent="x_58056_rf_request_fulfillment" relationship="NULL" sys_domain="global" view="Default view">4f4e47eb2fcdc55448dca1fef699b616</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-01-21 00:45:55</sys_created_on>
+            <sys_id>034e47eb2fcdc55448dca1fef699b618</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-01-21 00:45:55</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>type</element>
+            <list_id display_value="x_58056_rf_activity" element="NULL" name="x_58056_rf_activity" parent="x_58056_rf_request_fulfillment" relationship="NULL" sys_domain="global" view="Default view">4f4e47eb2fcdc55448dca1fef699b616</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-01-21 00:45:55</sys_created_on>
+            <sys_id>834e47eb2fcdc55448dca1fef699b618</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-01-21 00:45:55</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>subtype</element>
+            <list_id display_value="x_58056_rf_activity" element="NULL" name="x_58056_rf_activity" parent="x_58056_rf_request_fulfillment" relationship="NULL" sys_domain="global" view="Default view">4f4e47eb2fcdc55448dca1fef699b616</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-01-21 00:45:55</sys_created_on>
+            <sys_id>074e47eb2fcdc55448dca1fef699b618</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-01-21 00:45:55</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>display_name</element>
+            <list_id display_value="x_58056_rf_activity" element="NULL" name="x_58056_rf_activity" parent="x_58056_rf_request_fulfillment" relationship="NULL" sys_domain="global" view="Default view">4f4e47eb2fcdc55448dca1fef699b616</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-01-21 00:45:55</sys_created_on>
+            <sys_id>874e47eb2fcdc55448dca1fef699b618</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-01-21 00:45:55</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>active</element>
+            <list_id display_value="x_58056_rf_activity" element="NULL" name="x_58056_rf_activity" parent="x_58056_rf_request_fulfillment" relationship="NULL" sys_domain="global" view="Default view">4f4e47eb2fcdc55448dca1fef699b616</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-01-21 00:45:55</sys_created_on>
+            <sys_id>0b4e47eb2fcdc55448dca1fef699b618</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-01-21 00:45:55</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_58056_rf_activity</name>
+            <parent>x_58056_rf_request_fulfillment</parent>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-01-21 00:45:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4f4e47eb2fcdc55448dca1fef699b616</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_58056_rf_activity</sys_name>
+            <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+            <sys_update_name>sys_ui_list_x_58056_rf_activity_x_58056_rf_request_fulfillment_null</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-01-21 00:45:55</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

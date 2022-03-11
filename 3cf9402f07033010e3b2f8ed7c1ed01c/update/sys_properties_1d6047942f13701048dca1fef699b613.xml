@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices>none,debug,info,warn,error</choices>
+        <description>Logging level for the Request Fulfillment application. Determines what amount of detail is available in the system logs. </description>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_58056_rf.logging_level</name>
+        <read_roles/>
+        <suffix>logging_level</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-15 21:37:42</sys_created_on>
+        <sys_id>1d6047942f13701048dca1fef699b613</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_58056_rf.logging_level</sys_name>
+        <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name>sys_properties_1d6047942f13701048dca1fef699b613</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-15 21:37:42</sys_updated_on>
+        <type>choicelist</type>
+        <value>debug</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=1d6047942f13701048dca1fef699b613"/>
+</record_update>

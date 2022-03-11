@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="run_action" label="Run action" language="en" table="x_58056_rf_activity">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>run_action</element>
+            <help/>
+            <hint/>
+            <label>Run action</label>
+            <language>en</language>
+            <name>x_58056_rf_activity</name>
+            <plural>Run actions</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2022-01-21 00:31:33</sys_created_on>
+            <sys_id>f40b832b2fcdc55448dca1fef699b6b4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Run action</sys_name>
+            <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+            <sys_update_name>sys_documentation_x_58056_rf_activity_run_action_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2022-01-21 00:31:33</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

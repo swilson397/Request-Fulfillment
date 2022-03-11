@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD44e22f78bc2b3050e3d42aaf32457efc</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>3cf9402f07033010e3b2f8ed7c1ed01c</scope_name>
+        <serialized_content>{"FlowDesigner:FD44e22f78bc2b3050e3d42aaf32457efc":{"$COCollectionField":[{"activity":{"activitySets":[{"$338_activitySets":{"activityIDs":["Any"],"activityIDs.$field_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"ActivityIDs\",\"mandatory\":\"false\",\"child_name\":\"activityID\",\"uiUniqueId\":\"0b105180-8c81-4179-bbe4-26581e3d33cd\",\"uiTypeLabel\":\"Array.String\",\"child_label\":\"Activity ID\",\"child_type_label\":\"String\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.string\",\"child_type\":\"string\",\"order\":\"1\",\"max_length\":\"0\",\"child_uiUniqueId\":\"6e0a04ba-7c94-4442-ae33-a6b296ec9a79\"}"}}}],"activitySets.$field_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"Activity Sets\",\"mandatory\":\"false\",\"child_name\":\"activitySet\",\"uiUniqueId\":\"3433eaa3-0006-4f37-a421-50284e316027\",\"uiTypeLabel\":\"Array.Object\",\"child_label\":\"Activity Set\",\"child_type_label\":\"Object\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"2\",\"max_length\":\"0\",\"child_uiUniqueId\":\"3701ede8-71a6-4981-8ac4-845a9cc8b7e4\"}"},"type":"String","type.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"string\",\"default_value\":null,\"label\":\"Type\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"f73b7dd2-35d5-4979-bf9c-9aaa6cb51719\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"Activity List\",\"mandatory\":\"false\",\"child_name\":\"activity\",\"uiUniqueId\":\"814cfabb-d26d-4473-add7-1fe82187e3da\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD44e22f78bc2b3050e3d42aaf32457efc\",\"child_label\":\"Activity\",\"child_type_label\":\"Object\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"1\",\"max_length\":\"0\",\"child_uiUniqueId\":\"614cdc9f-e4e7-496f-a272-de563f7ff666\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD44e22f78bc2b3050e3d42aaf32457efc.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"Activity List\",\"mandatory\":\"false\",\"child_name\":\"activity\",\"uiUniqueId\":\"814cfabb-d26d-4473-add7-1fe82187e3da\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD44e22f78bc2b3050e3d42aaf32457efc\",\"child_label\":\"Activity\",\"child_type_label\":\"Object\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"1\",\"max_length\":\"0\",\"child_uiUniqueId\":\"614cdc9f-e4e7-496f-a272-de563f7ff666\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-29 23:38:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>08e22f782f2b305048dca1fef699b6fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FD44e22f78bc2b3050e3d42aaf32457efc</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name>sys_complex_object_08e22f782f2b305048dca1fef699b6fc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-29 23:38:22</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>

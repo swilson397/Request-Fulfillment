@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="variables_conditions" label="Variable conditions" language="en" table="x_58056_rf_activity">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>variables_conditions</element>
+            <help/>
+            <hint>Use this field to indicate variables whose value must match in order for this activity to be triggered</hint>
+            <label>Variable conditions</label>
+            <language>en</language>
+            <name>x_58056_rf_activity</name>
+            <plural>Variable conditions</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-10-13 23:49:48</sys_created_on>
+            <sys_id>fb0c497f07873010e3b2f8ed7c1ed0d2</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_name>Variable conditions</sys_name>
+            <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+            <sys_update_name>sys_documentation_x_58056_rf_activity_variables_conditions_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-10-14 00:01:24</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

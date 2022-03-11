@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD207000b9929fb01070d45098ef2816ff</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>3cf9402f07033010e3b2f8ed7c1ed01c</scope_name>
+        <serialized_content>{"FlowDesigner:FD207000b9929fb01070d45098ef2816ff":{"$COCollectionField":[{"activity":{"activitySets":[{"$318_activitySets":{"actiivtyIDs":["Any"],"actiivtyIDs.$field_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"actiivtyIDs\",\"mandatory\":\"false\",\"child_name\":\"actiivtyID\",\"uiUniqueId\":\"e0742a5a-440a-4f44-a553-b9dfad732905\",\"uiTypeLabel\":\"Array.String\",\"child_label\":\"actiivtyID\",\"child_type_label\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"array.string\",\"child_defaultValue\":\"\",\"child_type\":\"string\",\"order\":\"1\",\"max_length\":\"0\",\"child_uiUniqueId\":\"2d6ee4f2-db15-497a-8ac7-449724a4f5c7\"}"}}}],"activitySets.$field_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"activitySets\",\"mandatory\":\"false\",\"child_name\":\"activitySet\",\"uiUniqueId\":\"c9bbb00d-dfad-40f8-b214-cc895186ee17\",\"uiTypeLabel\":\"Array.Object\",\"child_label\":\"activitySet\",\"child_type_label\":\"Object\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_defaultValue\":\"\",\"child_type\":\"object\",\"order\":\"2\",\"max_length\":\"0\",\"child_uiUniqueId\":\"bbb95929-05d5-4ca1-9788-2ec8a9f0f4da\"}"},"type":"String","type.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"type\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"658266d4-e746-43f5-b4d5-c51d3c8da1a7\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"a0264177-b44e-4664-9f3c-db8eac059cce\",\"pwd2droppable\":\"true\",\"default_value\":\"\",\"label\":\"Activity List\",\"mandatory\":\"false\",\"child_name\":\"activity\",\"uiUniqueId\":\"012d670b-892b-4477-be79-7b1a443bae49\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD207000b9929fb01070d45098ef2816ff\",\"child_label\":\"activity\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceType\":\"step\",\"sourceUiUniqueId\":\"423d8f5b-4214-49f2-a656-f0eb0e8e651e\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"1\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"b733b0d5-78bd-4b92-b2c3-06dd99fc467f\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD207000b9929fb01070d45098ef2816ff.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"a0264177-b44e-4664-9f3c-db8eac059cce\",\"pwd2droppable\":\"true\",\"default_value\":\"\",\"label\":\"Activity List\",\"mandatory\":\"false\",\"child_name\":\"activity\",\"uiUniqueId\":\"012d670b-892b-4477-be79-7b1a443bae49\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD207000b9929fb01070d45098ef2816ff\",\"child_label\":\"activity\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceType\":\"step\",\"sourceUiUniqueId\":\"423d8f5b-4214-49f2-a656-f0eb0e8e651e\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"1\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"b733b0d5-78bd-4b92-b2c3-06dd99fc467f\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:27:18</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>e07000b92f9fb01048dca1fef699b6ff</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>FD207000b9929fb01070d45098ef2816ff</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name>sys_complex_object_e07000b92f9fb01048dca1fef699b6ff</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-29 00:24:16</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>

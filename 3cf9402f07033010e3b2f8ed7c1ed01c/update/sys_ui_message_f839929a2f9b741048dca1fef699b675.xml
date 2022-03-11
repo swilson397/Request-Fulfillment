@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_message">
+    <sys_ui_message action="INSERT_OR_UPDATE">
+        <application/>
+        <key>RF_Script_Annotation</key>
+        <language>en</language>
+        <message>&lt;h4&gt;Variables available in this script:&lt;/h4&gt;&#13;
+&lt;div style="display: table; border: none; margin-left: 5px;"&gt;&#13;
+   &lt;div style="display: table-row; border: none"&gt;&#13;
+    &lt;div style="display: table-cell; border: none"&gt;current&lt;/div&gt;&#13;
+    &lt;div style="display: table-cell; border: none; padding-left: 10px;";&gt;Always refers to the Requested Item record&lt;/div&gt;&#13;
+  &lt;/div&gt;&#13;
+  &lt;div style="display: table-row; border: none"&gt;&#13;
+    &lt;div style="display: table-cell; border: none"&gt;assignment_group&lt;/div&gt;&#13;
+    &lt;div style="display: table-cell; border: none; padding-left: 10px;"&gt;Used to set the assignment group value on a task. Should be populated with a Group sys_id. This is only available when Type = Task&lt;/div&gt;&#13;
+  &lt;/div&gt;&#13;
+  &lt;div style="display: table-row; border: none"&gt;&#13;
+    &lt;div style="display: table-cell; border: none"&gt;short_description&lt;/div&gt;&#13;
+    &lt;div style="display: table-cell; border: none; padding-left: 10px;"&gt;Used to set the short description value on a task. This is only available when Type = Task&lt;/div&gt;&#13;
+  &lt;/div&gt;&#13;
+  &lt;div style="display: table-row; border: none"&gt;&#13;
+    &lt;div style="display: table-cell; border: none"&gt;description&lt;/div&gt;&#13;
+    &lt;div style="display: table-cell; border: none; padding-left: 10px;"&gt;Used to set the description value on a task. This is only available when Type = Task&lt;/div&gt;&#13;
+  &lt;/div&gt;&#13;
+  &lt;div style="display: table-row; border: none"&gt;&#13;
+    &lt;div style="display: table-cell; border: none"&gt;users&lt;/div&gt;&#13;
+    &lt;div style="display: table-cell; border: none; padding-left: 10px;"&gt;Empty array initially. Should be populated with User sys_id values. This is only available when Type = Approver and Subtype is User or Both&lt;/div&gt;&#13;
+  &lt;/div&gt;&#13;
+  &lt;div style="display: table-row; border: none"&gt;&#13;
+    &lt;div style="display: table-cell; border: none"&gt;groups&lt;/div&gt;&#13;
+    &lt;div style="display: table-cell; border: none; padding-left: 10px;"&gt;Empty array initially. Should be populated with Group sys_id values. This is only available when Type = Approver and Subtype is Group or Both&lt;/div&gt;&#13;
+  &lt;/div&gt;&#13;
+  &lt;div style="display: table-row; border: none"&gt;&#13;
+    &lt;div style="display: table-cell; border: none"&gt;scratchpad&lt;/div&gt;&#13;
+    &lt;div style="display: table-cell; border: none; padding-left: 10px;"&gt;Javascript object. Should be populated with name/value pairs which will be used to initalize the workflow scratchpad. This is only available when Type = Workflow&lt;/div&gt;&#13;
+  &lt;/div&gt;&#13;
+  &lt;div style="display: table-row; border: none"&gt;&#13;
+    &lt;div style="display: table-cell; border: none"&gt;inputs&lt;/div&gt;&#13;
+    &lt;div style="display: table-cell; border: none; padding-left: 10px;"&gt;Javascript object. Should be populated with name/value pairs which will be passed to the Flow subflow or action. This is only available when Type = Flow Designer&lt;/div&gt;&#13;
+  &lt;/div&gt;&#13;
+&lt;/div&gt;</message>
+        <sys_class_name>sys_ui_message</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 23:52:03</sys_created_on>
+        <sys_id>f839929a2f9b741048dca1fef699b675</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>RF_Script_Annotation</sys_name>
+        <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name>sys_ui_message_f839929a2f9b741048dca1fef699b675</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-02-02 01:29:47</sys_updated_on>
+    </sys_ui_message>
+</record_update>

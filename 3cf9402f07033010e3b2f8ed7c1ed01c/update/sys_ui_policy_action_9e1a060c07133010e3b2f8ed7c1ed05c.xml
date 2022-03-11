@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="INSERT_OR_UPDATE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>groups</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-14 22:59:36</sys_created_on>
+        <sys_id>9e1a060c07133010e3b2f8ed7c1ed05c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>groups</sys_name>
+        <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name>sys_ui_policy_action_9e1a060c07133010e3b2f8ed7c1ed05c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-22 00:24:05</sys_updated_on>
+        <table>x_58056_rf_activity</table>
+        <ui_policy display_value="Group approval">5e0a06c807133010e3b2f8ed7c1ed020</ui_policy>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+</record_update>

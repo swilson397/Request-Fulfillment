@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Trigger" section_id="96ac45bf07873010e3b2f8ed7c1ed024" sys_domain="global" table="x_58056_rf_activity" version="3" view="">
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>false</is_plain_text>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-10-14 00:03:41</sys_created_on>
+            <sys_id>173f05ff07873010e3b2f8ed7c1ed0b9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-10-14 00:03:41</sys_updated_on>
+            <text>Indicate what conditions should trigger this activity. All variable and field conditions must match in order for this activity to be triggered. &#13;
+&#13;
+If the Advanced Condition checkbox is selected then the condition script must also evaluate to true.</text>
+            <type display_value="Section Details">19756e5ec3313000bac1addbdfba8f18</type>
+        </sys_ui_annotation>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>173f05ff07873010e3b2f8ed7c1ed0b9</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-10-14 00:03:41</sys_created_on>
+            <sys_id>9f3f05ff07873010e3b2f8ed7c1ed0be</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Trigger" display_value="Trigger" name="x_58056_rf_activity" sys_domain="global" view="Default view">96ac45bf07873010e3b2f8ed7c1ed024</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-10-14 00:03:41</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-10-14 00:03:41</sys_created_on>
+            <sys_id>133f05ff07873010e3b2f8ed7c1ed0bf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Trigger" display_value="Trigger" name="x_58056_rf_activity" sys_domain="global" view="Default view">96ac45bf07873010e3b2f8ed7c1ed024</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-10-14 00:03:41</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-10-14 00:03:41</sys_created_on>
+            <sys_id>933f05ff07873010e3b2f8ed7c1ed0bf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Trigger" display_value="Trigger" name="x_58056_rf_activity" sys_domain="global" view="Default view">96ac45bf07873010e3b2f8ed7c1ed024</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-10-14 00:03:41</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>variables_conditions</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-10-14 00:03:41</sys_created_on>
+            <sys_id>173f05ff07873010e3b2f8ed7c1ed0bf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Trigger" display_value="Trigger" name="x_58056_rf_activity" sys_domain="global" view="Default view">96ac45bf07873010e3b2f8ed7c1ed024</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-10-14 00:03:41</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>field_conditions</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-10-14 00:03:41</sys_created_on>
+            <sys_id>973f05ff07873010e3b2f8ed7c1ed0bf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Trigger" display_value="Trigger" name="x_58056_rf_activity" sys_domain="global" view="Default view">96ac45bf07873010e3b2f8ed7c1ed024</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-10-14 00:03:41</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>advanced_condition</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-10-14 00:03:41</sys_created_on>
+            <sys_id>1b3f05ff07873010e3b2f8ed7c1ed0bf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Trigger" display_value="Trigger" name="x_58056_rf_activity" sys_domain="global" view="Default view">96ac45bf07873010e3b2f8ed7c1ed024</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-10-14 00:03:41</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>condition_script</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-10-14 00:03:41</sys_created_on>
+            <sys_id>9b3f05ff07873010e3b2f8ed7c1ed0bf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Trigger" display_value="Trigger" name="x_58056_rf_activity" sys_domain="global" view="Default view">96ac45bf07873010e3b2f8ed7c1ed024</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-10-14 00:03:41</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Trigger</caption>
+            <header>false</header>
+            <name>x_58056_rf_activity</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-10-13 23:52:26</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>96ac45bf07873010e3b2f8ed7c1ed024</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_58056_rf_activity</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+            <sys_update_name>sys_ui_section_96ac45bf07873010e3b2f8ed7c1ed024</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-10-13 23:52:26</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

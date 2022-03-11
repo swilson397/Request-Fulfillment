@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <ih_action>false</ih_action>
+        <internal_name>get_request_fulfillment_activity_list</internal_name>
+        <label_cache>[{"name":"{{action._}}","label":"action➛","type":"action","ref":""},{"name":"{{action.reqitemgr}}","label":"action➛reqItemGR","type":"action","ref":""},{"name":"{{action.request_item}}","label":"action➛Request Item","type":"action","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_list}}","label":"Build Activity Setstep➛➛activity_list","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activitylist}}","label":"Build Activity Setstep➛➛activityList","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities}}","label":"Build Activity Setstep➛➛activities","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity}}","label":"Build Activity Setstep➛➛activities➛activity","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activity_child1}}","label":"Build Activity Setstep➛➛activities➛activity➛activity_child1","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.type}}","label":"Build Activity Setstep➛➛activities➛activity➛type","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activity_child2}}","label":"Build Activity Setstep➛➛activities➛activity➛activity_child2","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.activityset_child1}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛activitySet_child1","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.activities1}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛activities","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.activityGroup}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛activityGroup","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.activityGroups}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛actiivtyIDs","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.activityGroups.activityGroup}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛actiivtyIDs➛activityGroup","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.activityGroups.actiivtyID.activitygroup_child1}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛actiivtyIDs➛actiivtyID➛activityGroup_child1","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.activityGroups.actiivtyID.activityID}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛actiivtyIDs➛actiivtyID➛activityID","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.activityGroups.actiivtyID}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛actiivtyIDs➛actiivtyID","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.actiivtyIDs}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛actiivtyIDs","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.actiivtyIDs.actiivtyIDs_child0.actiivtyids_child0_child1}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛actiivtyIDs➛actiivtyIDs_child0➛actiivtyIDs_child0_child1","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.actiivtyIDs.actiivtyIDs_child0.actiivtyID}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛actiivtyIDs➛actiivtyIDs_child0➛actiivtyID","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.actiivtyIDs.actiivtyID}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛actiivtyIDs➛actiivtyID","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.Activity}}","label":"Build Activity Setstep➛➛Activity List➛Activity","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity}}","label":"Build Activity Setstep➛➛Activity List➛Activity","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activity_child1}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity_child1","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.Type}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Type","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.type}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Type","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activity_child2}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity_child2","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.Activity_Sets}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activity_sets}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activitySets.Activity_Set}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets➛Activity Set","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activitySets.activity_set}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets➛Activity Set","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activitySets}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activitySets.activitySet}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets➛Activity Set","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activitySets.activitySet.activity_set_child1}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets➛Activity Set➛Activity Set_child1","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activitySets.activitySet.Activity}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets➛Activity Set➛Activity","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activitySets.activitySet.ActivityIDs}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets➛Activity Set➛ActivityIDs","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activitySets.activitySet.activityIDs}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets➛Activity Set➛ActivityIDs","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList}}","label":"Build Activity Setstep➛➛Activity List","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activitySets.activitySet.activityIDs.Activity_ID}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets➛Activity Set➛ActivityIDs➛Activity ID","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activitySets.activitySet.activityIDs.activityID}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets➛Activity Set➛ActivityIDs➛Activity ID","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].variable}}","label":"step➛Build Activity Set➛variable","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_set}}","label":"step➛Build Activity Set➛Activity Set","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets}}","label":"step➛Build Activity Set➛Activity Sets","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.Activity_Set}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_set_child1}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity Set_child1","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.Type}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Type","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.type}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Type","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_set_child2}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity Set_child2","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.Activity_ID_Set}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Set","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_ID_Set}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Set","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.Activity_ID_Sets}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Sets","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_id_sets}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Sets","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_id_sets.Activity_ID_Set}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Sets➛Activity ID Set","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_id_sets.activity_id_set}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Sets➛Activity ID Set","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_id_sets.activity_id_set.activity_id_set_child1}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Sets➛Activity ID Set➛Activity ID Set_child1","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_id_sets.activity_id_set.Activity_IDs}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Sets➛Activity ID Set➛Activity IDs","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_id_sets.activity_id_set.activity_ids}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Sets➛Activity ID Set➛Activity IDs","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_id_sets.activity_id_set.activity_ids.Activity_ID}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Sets➛Activity ID Set➛Activity IDs➛Activity ID","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_id_sets.activity_id_set.activity_ids.activity_id}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Sets➛Activity ID Set➛Activity IDs➛Activity ID","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_id_sets.Activity_IDs}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Sets➛Activity IDs","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activitySets}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛activitySets","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.Activity_Sets}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity Sets","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activitySets.activityIDs}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛activitySets➛activityIDs","type":"step","ref":""}]</label_cache>
+        <master_snapshot>7acbff252f9fb01048dca1fef699b674</master_snapshot>
+        <name>Get Request Fulfillment Activity List</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 22:51:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>0128fb212f9fb01048dca1fef699b64e</sys_id>
+        <sys_mod_count>60</sys_mod_count>
+        <sys_name>Get Request Fulfillment Activity List</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_0128fb212f9fb01048dca1fef699b64e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-27 00:49:57</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=0128fb212f9fb01048dca1fef699b64e"/>
+    <sys_variable_value action="delete_multiple" query="document_key=0128fb212f9fb01048dca1fef699b64e"/>
+    <sys_element_mapping action="delete_multiple" query="id=0128fb212f9fb01048dca1fef699b64e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>activity_list</field>
+        <id>0128fb212f9fb01048dca1fef699b64e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:06:53</sys_created_on>
+        <sys_id>65cbbf252f9fb01048dca1fef699b6de</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-29 00:24:09</sys_updated_on>
+        <table>var__m_sys_hub_action_output_0128fb212f9fb01048dca1fef699b64e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>activity_sets</field>
+        <id>0128fb212f9fb01048dca1fef699b64e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-29 23:58:37</sys_created_on>
+        <sys_id>c9872fbc2f2b305048dca1fef699b616</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-29 23:58:37</sys_updated_on>
+        <table>var__m_sys_hub_action_output_0128fb212f9fb01048dca1fef699b64e</table>
+        <value>{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets}}</value>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=0128fb212f9fb01048dca1fef699b64e^sys_idNOT INd1cbbf252f9fb01048dca1fef699b693"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Get Request Fulfillment Activity List">0128fb212f9fb01048dca1fef699b64e</action>
+        <cid>a0264177-b44e-4664-9f3c-db8eac059cce</cid>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Build Activity Set</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:06:52</sys_created_on>
+        <sys_id>d1cbbf252f9fb01048dca1fef699b693</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-24 18:26:56</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=d1cbbf252f9fb01048dca1fef699b693"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>d1cbbf252f9fb01048dca1fef699b693</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:06:53</sys_created_on>
+        <sys_id>61cbbf252f9fb01048dca1fef699b6d2</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-24 18:26:56</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+  outputs.activity_sets = new x_58056_rf.RequestFulfillment().getActivityList(inputs.reqItemGR);
+})(inputs, outputs);
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>d1cbbf252f9fb01048dca1fef699b693</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:06:53</sys_created_on>
+        <sys_id>a5cbbf252f9fb01048dca1fef699b6d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-19 23:06:53</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=d1cbbf252f9fb01048dca1fef699b693"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>d1cbbf252f9fb01048dca1fef699b693</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:06:53</sys_created_on>
+        <sys_id>e9cbbf252f9fb01048dca1fef699b6d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-19 23:06:53</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>reqItemGR</field>
+        <id>d1cbbf252f9fb01048dca1fef699b693</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:06:53</sys_created_on>
+        <sys_id>6dcbbf252f9fb01048dca1fef699b6d2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-19 23:06:53</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_d1cbbf252f9fb01048dca1fef699b693</table>
+        <value>{{action.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>d1cbbf252f9fb01048dca1fef699b693</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:06:53</sys_created_on>
+        <sys_id>25cbbf252f9fb01048dca1fef699b6d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-19 23:06:53</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=d1cbbf252f9fb01048dca1fef699b693^sys_idNOT IN1dcbbf252f9fb01048dca1fef699b69a"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>reqItemGR</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Build Activity Set">d1cbbf252f9fb01048dca1fef699b693</model>
+        <model_id>d1cbbf252f9fb01048dca1fef699b693</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_d1cbbf252f9fb01048dca1fef699b693</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:06:52</sys_created_on>
+        <sys_id>1dcbbf252f9fb01048dca1fef699b69a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-19 23:06:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=d1cbbf252f9fb01048dca1fef699b693^sys_idNOT IN701727bc2f2b305048dca1fef699b65e"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=Activity Set,child_name=activity_set,child_type=object,child_type_label=Object,child_uiUniqueId=f08492b3-2870-4855-a883-506bab5b2ff3,co_type_name=FDfc1727bc302b305094895baf798b295b,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=6cacef62-f7fc-45e5-90d2-f0a2c7885f89</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>activity_sets</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Activity Sets</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Build Activity Set">d1cbbf252f9fb01048dca1fef699b693</model>
+        <model_id>d1cbbf252f9fb01048dca1fef699b693</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_d1cbbf252f9fb01048dca1fef699b693</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-29 23:56:42</sys_created_on>
+        <sys_id>701727bc2f2b305048dca1fef699b65e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-29 23:56:42</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_action_input action="delete_multiple" query="model=0128fb212f9fb01048dca1fef699b64e^sys_idNOT INcdcb37e12f9fb01048dca1fef699b66c"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=c7232563-b344-46c8-bac5-7f5ab42e050f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sc_req_item</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Item</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Get Request Fulfillment Activity List">0128fb212f9fb01048dca1fef699b64e</model>
+        <model_id>0128fb212f9fb01048dca1fef699b64e</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_0128fb212f9fb01048dca1fef699b64e</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:06:51</sys_created_on>
+        <sys_id>cdcb37e12f9fb01048dca1fef699b66c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-19 23:06:52</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_output action="delete_multiple" query="model=0128fb212f9fb01048dca1fef699b64e^sys_idNOT INfc872fbc2f2b305048dca1fef699b602"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=Activity Set,child_name=activity_set,child_type=object,child_type_label=Object,child_uiUniqueId=f08492b3-2870-4855-a883-506bab5b2ff3,co_type_name=FDfc872fbcb32b3050b5cf3819694f9000,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,sourceId=a0264177-b44e-4664-9f3c-db8eac059cce,sourceType=step,sourceUiUniqueId=6cacef62-f7fc-45e5-90d2-f0a2c7885f89,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=ad8a4e67-fcd7-44ef-8444-f59b0da31798</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>activity_sets</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Activity Sets</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Get Request Fulfillment Activity List">0128fb212f9fb01048dca1fef699b64e</model>
+        <model_id>0128fb212f9fb01048dca1fef699b64e</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_0128fb212f9fb01048dca1fef699b64e</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-29 23:58:37</sys_created_on>
+        <sys_id>fc872fbc2f2b305048dca1fef699b602</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-29 23:58:37</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_0128fb212f9fb01048dca1fef699b64e^sys_idNOT IN15cbbf252f9fb01048dca1fef699b690"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>request_item</element>
+        <help/>
+        <hint/>
+        <label>Request Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_0128fb212f9fb01048dca1fef699b64e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:06:52</sys_created_on>
+        <sys_id>15cbbf252f9fb01048dca1fef699b690</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-19 23:06:52</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_0128fb212f9fb01048dca1fef699b64e^sys_idNOT IN70872fbc2f2b305048dca1fef699b609"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>activity_sets</element>
+        <help/>
+        <hint/>
+        <label>Activity Sets</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_0128fb212f9fb01048dca1fef699b64e</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-29 23:58:37</sys_created_on>
+        <sys_id>70872fbc2f2b305048dca1fef699b609</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-29 23:58:37</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=0128fb212f9fb01048dca1fef699b64e^sys_idNOT IN5bcb33652f9fb01048dca1fef699b61a"/>
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="Get Request Fulfillment Activity List">0128fb212f9fb01048dca1fef699b64e</action_id>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"5bcb33652f9fb01048dca1fef699b61a","name":"plan"}}</plan>
+        <snapshot>7cc886a12fd5411048dca1fef699b6db</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:07:00</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>5bcb33652f9fb01048dca1fef699b61a</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-27 00:49:58</sys_updated_on>
+    </sys_hub_action_plan>
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_template/>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>get_request_fulfillment_activity_list</internal_name>
+        <label_cache>[{"name":"{{action._}}","label":"action➛","type":"action","ref":""},{"name":"{{action.reqitemgr}}","label":"action➛reqItemGR","type":"action","ref":""},{"name":"{{action.request_item}}","label":"action➛Request Item","type":"action","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_list}}","label":"Build Activity Setstep➛➛activity_list","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activitylist}}","label":"Build Activity Setstep➛➛activityList","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities}}","label":"Build Activity Setstep➛➛activities","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity}}","label":"Build Activity Setstep➛➛activities➛activity","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activity_child1}}","label":"Build Activity Setstep➛➛activities➛activity➛activity_child1","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.type}}","label":"Build Activity Setstep➛➛activities➛activity➛type","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activity_child2}}","label":"Build Activity Setstep➛➛activities➛activity➛activity_child2","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.activityset_child1}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛activitySet_child1","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.activities1}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛activities","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.activityGroup}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛activityGroup","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.activityGroups}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛actiivtyIDs","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.activityGroups.activityGroup}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛actiivtyIDs➛activityGroup","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.activityGroups.actiivtyID.activitygroup_child1}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛actiivtyIDs➛actiivtyID➛activityGroup_child1","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.activityGroups.actiivtyID.activityID}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛actiivtyIDs➛actiivtyID➛activityID","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.activityGroups.actiivtyID}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛actiivtyIDs➛actiivtyID","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.actiivtyIDs}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛actiivtyIDs","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.actiivtyIDs.actiivtyIDs_child0.actiivtyids_child0_child1}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛actiivtyIDs➛actiivtyIDs_child0➛actiivtyIDs_child0_child1","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.actiivtyIDs.actiivtyIDs_child0.actiivtyID}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛actiivtyIDs➛actiivtyIDs_child0➛actiivtyID","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activities.activity.activitySets.activitySet.actiivtyIDs.actiivtyID}}","label":"Build Activity Setstep➛➛activities➛activity➛activitySets➛activitySet➛actiivtyIDs➛actiivtyID","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.Activity}}","label":"Build Activity Setstep➛➛Activity List➛Activity","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity}}","label":"Build Activity Setstep➛➛Activity List➛Activity","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activity_child1}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity_child1","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.Type}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Type","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.type}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Type","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activity_child2}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity_child2","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.Activity_Sets}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activity_sets}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activitySets.Activity_Set}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets➛Activity Set","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activitySets.activity_set}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets➛Activity Set","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activitySets}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activitySets.activitySet}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets➛Activity Set","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activitySets.activitySet.activity_set_child1}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets➛Activity Set➛Activity Set_child1","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activitySets.activitySet.Activity}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets➛Activity Set➛Activity","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activitySets.activitySet.ActivityIDs}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets➛Activity Set➛ActivityIDs","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activitySets.activitySet.activityIDs}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets➛Activity Set➛ActivityIDs","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList}}","label":"Build Activity Setstep➛➛Activity List","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activitySets.activitySet.activityIDs.Activity_ID}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets➛Activity Set➛ActivityIDs➛Activity ID","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activityList.activity.activitySets.activitySet.activityIDs.activityID}}","label":"Build Activity Setstep➛➛Activity List➛Activity➛Activity Sets➛Activity Set➛ActivityIDs➛Activity ID","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].variable}}","label":"step➛Build Activity Set➛variable","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_set}}","label":"step➛Build Activity Set➛Activity Set","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets}}","label":"step➛Build Activity Set➛Activity Sets","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.Activity_Set}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_set_child1}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity Set_child1","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.Type}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Type","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.type}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Type","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_set_child2}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity Set_child2","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.Activity_ID_Set}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Set","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_ID_Set}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Set","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.Activity_ID_Sets}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Sets","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_id_sets}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Sets","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_id_sets.Activity_ID_Set}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Sets➛Activity ID Set","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_id_sets.activity_id_set}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Sets➛Activity ID Set","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_id_sets.activity_id_set.activity_id_set_child1}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Sets➛Activity ID Set➛Activity ID Set_child1","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_id_sets.activity_id_set.Activity_IDs}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Sets➛Activity ID Set➛Activity IDs","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_id_sets.activity_id_set.activity_ids}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Sets➛Activity ID Set➛Activity IDs","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_id_sets.activity_id_set.activity_ids.Activity_ID}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Sets➛Activity ID Set➛Activity IDs➛Activity ID","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_id_sets.activity_id_set.activity_ids.activity_id}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Sets➛Activity ID Set➛Activity IDs➛Activity ID","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activity_id_sets.Activity_IDs}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity ID Sets➛Activity IDs","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activitySets}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛activitySets","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.Activity_Sets}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛Activity Sets","type":"step","ref":""},{"name":"{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets.activity_set.activitySets.activityIDs}}","label":"step➛Build Activity Set➛Activity Sets➛Activity Set➛activitySets➛activityIDs","type":"step","ref":""}]</label_cache>
+        <master>true</master>
+        <name>Get Request Fulfillment Activity List</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <parent_action display_value="Get Request Fulfillment Activity List">0128fb212f9fb01048dca1fef699b64e</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:06:57</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>7acbff252f9fb01048dca1fef699b674</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-27 00:49:57</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=7acbff252f9fb01048dca1fef699b674"/>
+    <sys_variable_value action="delete_multiple" query="document_key=7acbff252f9fb01048dca1fef699b674"/>
+    <sys_element_mapping action="delete_multiple" query="id=7acbff252f9fb01048dca1fef699b674"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>activity_list</field>
+        <id>7acbff252f9fb01048dca1fef699b674</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:06:58</sys_created_on>
+        <sys_id>becbff252f9fb01048dca1fef699b6b9</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-29 00:24:16</sys_updated_on>
+        <table>var__m_sys_hub_action_output_7acbff252f9fb01048dca1fef699b674</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>activity_sets</field>
+        <id>7acbff252f9fb01048dca1fef699b674</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-29 23:58:47</sys_created_on>
+        <sys_id>9f876fbc2f2b305048dca1fef699b67f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-29 23:58:47</sys_updated_on>
+        <table>var__m_sys_hub_action_output_7acbff252f9fb01048dca1fef699b674</table>
+        <value>{{step[a0264177-b44e-4664-9f3c-db8eac059cce].activity_sets}}</value>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=7acbff252f9fb01048dca1fef699b674^sys_idNOT IN7acbff252f9fb01048dca1fef699b682"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Get Request Fulfillment Activity List">7acbff252f9fb01048dca1fef699b674</action>
+        <cid>a0264177-b44e-4664-9f3c-db8eac059cce</cid>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Build Activity Set</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_class_name>sys_hub_step_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:06:58</sys_created_on>
+        <sys_id>7acbff252f9fb01048dca1fef699b682</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-24 18:27:03</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=7acbff252f9fb01048dca1fef699b682"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7acbff252f9fb01048dca1fef699b682</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:06:58</sys_created_on>
+        <sys_id>36cbff252f9fb01048dca1fef699b6a2</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-24 18:27:03</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+  outputs.activity_sets = new x_58056_rf.RequestFulfillment().getActivityList(inputs.reqItemGR);
+})(inputs, outputs);
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>7acbff252f9fb01048dca1fef699b682</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:06:58</sys_created_on>
+        <sys_id>72cbff252f9fb01048dca1fef699b6a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-19 23:06:58</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=7acbff252f9fb01048dca1fef699b682"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>7acbff252f9fb01048dca1fef699b682</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:06:58</sys_created_on>
+        <sys_id>3ecbff252f9fb01048dca1fef699b6a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-19 23:06:58</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>reqItemGR</field>
+        <id>7acbff252f9fb01048dca1fef699b682</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:06:58</sys_created_on>
+        <sys_id>becbff252f9fb01048dca1fef699b6a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-19 23:06:58</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_7acbff252f9fb01048dca1fef699b682</table>
+        <value>{{action.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>7acbff252f9fb01048dca1fef699b682</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:06:58</sys_created_on>
+        <sys_id>fecbff252f9fb01048dca1fef699b6a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-19 23:06:58</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=7acbff252f9fb01048dca1fef699b682^sys_idNOT INb2cbff252f9fb01048dca1fef699b692"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>reqItemGR</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>reqItemGR</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Build Activity Set">7acbff252f9fb01048dca1fef699b682</model>
+        <model_id>7acbff252f9fb01048dca1fef699b682</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_7acbff252f9fb01048dca1fef699b682</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:06:58</sys_created_on>
+        <sys_id>b2cbff252f9fb01048dca1fef699b692</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-19 23:06:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=7acbff252f9fb01048dca1fef699b682^sys_idNOT IN0f876fbc2f2b305048dca1fef699b655"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=Activity Set,child_name=activity_set,child_type=object,child_type_label=Object,child_uiUniqueId=f08492b3-2870-4855-a883-506bab5b2ff3,co_type_name=FD8b876fbcb32b30506ab027e1f575c753,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=6cacef62-f7fc-45e5-90d2-f0a2c7885f89</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>activity_sets</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Activity Sets</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Build Activity Set">7acbff252f9fb01048dca1fef699b682</model>
+        <model_id>7acbff252f9fb01048dca1fef699b682</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_7acbff252f9fb01048dca1fef699b682</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-29 23:58:46</sys_created_on>
+        <sys_id>0f876fbc2f2b305048dca1fef699b655</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-29 23:58:46</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_action_input action="delete_multiple" query="model=7acbff252f9fb01048dca1fef699b674^sys_idNOT IN7ecbff252f9fb01048dca1fef699b677"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference,uiUniqueId=c7232563-b344-46c8-bac5-7f5ab42e050f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sc_req_item</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Item</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Get Request Fulfillment Activity List">7acbff252f9fb01048dca1fef699b674</model>
+        <model_id>7acbff252f9fb01048dca1fef699b674</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_7acbff252f9fb01048dca1fef699b674</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:06:58</sys_created_on>
+        <sys_id>7ecbff252f9fb01048dca1fef699b677</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-19 23:06:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_output action="delete_multiple" query="model=7acbff252f9fb01048dca1fef699b674^sys_idNOT IN07876fbc2f2b305048dca1fef699b66d"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=Activity Set,child_name=activity_set,child_type=object,child_type_label=Object,child_uiUniqueId=f08492b3-2870-4855-a883-506bab5b2ff3,co_type_name=FD43876fbc5d2b305026e4ea6edc50e86b,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,sourceId=a0264177-b44e-4664-9f3c-db8eac059cce,sourceType=step,sourceUiUniqueId=6cacef62-f7fc-45e5-90d2-f0a2c7885f89,uiType=array.object,uiTypeLabel=Array.Object,uiUniqueId=ad8a4e67-fcd7-44ef-8444-f59b0da31798</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>activity_sets</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Activity Sets</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Get Request Fulfillment Activity List">7acbff252f9fb01048dca1fef699b674</model>
+        <model_id>7acbff252f9fb01048dca1fef699b674</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_7acbff252f9fb01048dca1fef699b674</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-29 23:58:46</sys_created_on>
+        <sys_id>07876fbc2f2b305048dca1fef699b66d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-29 23:58:46</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_7acbff252f9fb01048dca1fef699b674^sys_idNOT IN36cbff252f9fb01048dca1fef699b680"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>request_item</element>
+        <help/>
+        <hint/>
+        <label>Request Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_7acbff252f9fb01048dca1fef699b674</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-19 23:06:58</sys_created_on>
+        <sys_id>36cbff252f9fb01048dca1fef699b680</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-19 23:06:58</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_7acbff252f9fb01048dca1fef699b674^sys_idNOT INdf876fbc2f2b305048dca1fef699b672"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>activity_sets</element>
+        <help/>
+        <hint/>
+        <label>Activity Sets</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_7acbff252f9fb01048dca1fef699b674</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-29 23:58:46</sys_created_on>
+        <sys_id>df876fbc2f2b305048dca1fef699b672</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-29 23:58:46</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_type_definition action="update">
+        <sys_id>0128fb212f9fb01048dca1fef699b64e</sys_id>
+        <latest_snapshot>7acbff252f9fb01048dca1fef699b674</latest_snapshot>
+    </sys_hub_action_type_definition>
+</record_update>

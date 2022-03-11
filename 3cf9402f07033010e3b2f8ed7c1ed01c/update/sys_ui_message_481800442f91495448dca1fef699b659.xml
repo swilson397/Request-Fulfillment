@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_message">
+    <sys_ui_message action="INSERT_OR_UPDATE">
+        <application/>
+        <key>RF_Flow_Annotation</key>
+        <language>en</language>
+        <message>Use the script field on the Script tab to build the inputs for the subflow or action.</message>
+        <sys_class_name>sys_ui_message</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-01-21 23:36:47</sys_created_on>
+        <sys_id>481800442f91495448dca1fef699b659</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>RF_Flow_Annotation</sys_name>
+        <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name>sys_ui_message_481800442f91495448dca1fef699b659</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-21 23:40:23</sys_updated_on>
+    </sys_ui_message>
+</record_update>

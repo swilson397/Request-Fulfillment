@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDfc872fbcb32b3050b5cf3819694f9000</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>3cf9402f07033010e3b2f8ed7c1ed01c</scope_name>
+        <serialized_content>{"FlowDesigner:FDfc872fbcb32b3050b5cf3819694f9000":{"$COCollectionField":[{"activity_set":{"activitySets":["Any"],"activitySets.$field_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"activitySets\",\"mandatory\":\"false\",\"child_name\":\"activityIDs\",\"uiUniqueId\":\"103a1cee-7c2a-4666-9b25-2580042023ab\",\"uiTypeLabel\":\"Array.String\",\"child_label\":\"activityIDs\",\"child_type_label\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"array.string\",\"child_defaultValue\":\"\",\"child_type\":\"string\",\"order\":\"2\",\"max_length\":\"0\",\"child_uiUniqueId\":\"ca6b2117-2e75-41d6-a065-e14973d588b3\"}"},"type":"String","type.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Type\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\",\"uiUniqueId\":\"79c9d093-284f-436a-9f30-3ae4950917a4\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"a0264177-b44e-4664-9f3c-db8eac059cce\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"Activity Sets\",\"mandatory\":\"false\",\"child_name\":\"activity_set\",\"uiUniqueId\":\"ad8a4e67-fcd7-44ef-8444-f59b0da31798\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDfc872fbcb32b3050b5cf3819694f9000\",\"child_label\":\"Activity Set\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceType\":\"step\",\"sourceUiUniqueId\":\"6cacef62-f7fc-45e5-90d2-f0a2c7885f89\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_defaultValue\":\"\",\"child_type\":\"object\",\"order\":\"1\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"f08492b3-2870-4855-a883-506bab5b2ff3\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDfc872fbcb32b3050b5cf3819694f9000.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"a0264177-b44e-4664-9f3c-db8eac059cce\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"Activity Sets\",\"mandatory\":\"false\",\"child_name\":\"activity_set\",\"uiUniqueId\":\"ad8a4e67-fcd7-44ef-8444-f59b0da31798\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDfc872fbcb32b3050b5cf3819694f9000\",\"child_label\":\"Activity Set\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceType\":\"step\",\"sourceUiUniqueId\":\"6cacef62-f7fc-45e5-90d2-f0a2c7885f89\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_defaultValue\":\"\",\"child_type\":\"object\",\"order\":\"1\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"f08492b3-2870-4855-a883-506bab5b2ff3\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-29 23:58:37</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>b0872fbc2f2b305048dca1fef699b601</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>FDfc872fbcb32b3050b5cf3819694f9000</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name>sys_complex_object_b0872fbc2f2b305048dca1fef699b601</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-01-27 00:49:56</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>

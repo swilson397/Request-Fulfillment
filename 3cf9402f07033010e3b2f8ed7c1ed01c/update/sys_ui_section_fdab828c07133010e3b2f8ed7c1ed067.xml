@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Task" section_id="fdab828c07133010e3b2f8ed7c1ed067" sys_domain="global" table="x_58056_rf_activity" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>short_description</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-10-14 23:09:38</sys_created_on>
+            <sys_id>117cce8c07133010e3b2f8ed7c1ed0cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Task" display_value="Task" name="x_58056_rf_activity" sys_domain="global" view="Default view">fdab828c07133010e3b2f8ed7c1ed067</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-10-14 23:09:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>description</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-10-14 23:09:38</sys_created_on>
+            <sys_id>917cce8c07133010e3b2f8ed7c1ed0cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Task" display_value="Task" name="x_58056_rf_activity" sys_domain="global" view="Default view">fdab828c07133010e3b2f8ed7c1ed067</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-10-14 23:09:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>assignment_group</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-10-14 23:09:38</sys_created_on>
+            <sys_id>157cce8c07133010e3b2f8ed7c1ed0cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Task" display_value="Task" name="x_58056_rf_activity" sys_domain="global" view="Default view">fdab828c07133010e3b2f8ed7c1ed067</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-10-14 23:09:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>action_when_closed_incomplete</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-10-14 23:09:38</sys_created_on>
+            <sys_id>957cce8c07133010e3b2f8ed7c1ed0cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Task" display_value="Task" name="x_58056_rf_activity" sys_domain="global" view="Default view">fdab828c07133010e3b2f8ed7c1ed067</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-10-14 23:09:38</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Task</caption>
+            <header>false</header>
+            <name>x_58056_rf_activity</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-10-14 23:06:08</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fdab828c07133010e3b2f8ed7c1ed067</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_58056_rf_activity</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+            <sys_update_name>sys_ui_section_fdab828c07133010e3b2f8ed7c1ed067</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-10-14 23:06:08</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

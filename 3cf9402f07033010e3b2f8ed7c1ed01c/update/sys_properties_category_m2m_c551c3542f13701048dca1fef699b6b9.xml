@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties_category_m2m">
+    <sys_properties_category_m2m action="INSERT_OR_UPDATE">
+        <category display_value="Request Fulfillment">392183d42f13701048dca1fef699b624</category>
+        <order>100</order>
+        <property display_value="x_58056_rf.logging_level" name="x_58056_rf.logging_level">1d6047942f13701048dca1fef699b613</property>
+        <sys_class_name>sys_properties_category_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-15 21:39:07</sys_created_on>
+        <sys_id>c551c3542f13701048dca1fef699b6b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_58056_rf.logging_level.Request Fulfillment</sys_name>
+        <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name>sys_properties_category_m2m_c551c3542f13701048dca1fef699b6b9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-15 21:39:07</sys_updated_on>
+    </sys_properties_category_m2m>
+</record_update>

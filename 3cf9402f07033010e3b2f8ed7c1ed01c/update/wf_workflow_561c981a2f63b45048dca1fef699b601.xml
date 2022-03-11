@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="wf_workflow_version">
+    <wf_workflow_version action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <activity_stages>{"subflows":[],"stages":{},"activities":{},"ends":["74ee51ae2fa7f45048dca1fef699b69e"]}</activity_stages>
+        <after_business_rules>false</after_business_rules>
+        <checked_out/>
+        <checked_out_by/>
+        <column_renderer display_value="Workflow-driven">a56213111b030100adca1e094f0713ac</column_renderer>
+        <condition/>
+        <condition_type/>
+        <description/>
+        <expected_sequences>38ee51ae2fa7f45048dca1fef699b69d,7cee51ae2fa7f45048dca1fef699b69e,5b1f95ae2fa7f45048dca1fef699b6a7,2720a5ae2fa7f45048dca1fef699b688,74ee51ae2fa7f45048dca1fef699b69e</expected_sequences>
+        <expected_time>1970-01-01 14:00:00</expected_time>
+        <expected_time_type/>
+        <full_sequences>38ee51ae2fa7f45048dca1fef699b69d,7cee51ae2fa7f45048dca1fef699b69e,5b1f95ae2fa7f45048dca1fef699b6a7,2720a5ae2fa7f45048dca1fef699b688,74ee51ae2fa7f45048dca1fef699b69e</full_sequences>
+        <journal/>
+        <max_activity_count>100</max_activity_count>
+        <name>Check Catalog Task Status</name>
+        <not_cacheable>false</not_cacheable>
+        <on_cancel><![CDATA[// This script executes if the workflow is cancelled.// The global variable context_sys_id contains the sys_id of the cancelled workflow context.]]></on_cancel>
+        <order>100</order>
+        <pin_type>set_by_activity</pin_type>
+        <published>true</published>
+        <relative_duration display_value="2 business days by 4pm">3bf802c20a0a0b52008e2859cd8abcf2</relative_duration>
+        <requires_ert>true</requires_ert>
+        <run_multiple>false</run_multiple>
+        <schedule/>
+        <stage_field/>
+        <stage_order>computed</stage_order>
+        <start display_value="Begin">38ee51ae2fa7f45048dca1fef699b69d</start>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:31:03</sys_created_on>
+        <sys_id>38ee51ae2fa7f45048dca1fef699b69b</sys_id>
+        <sys_mod_count>55</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-02-02 19:21:19</sys_updated_on>
+        <table>task</table>
+        <timezone/>
+        <validated>true</validated>
+        <workflow display_value="Check Catalog Task Status">561c981a2f63b45048dca1fef699b601</workflow>
+    </wf_workflow_version>
+    <wf_workflow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <description/>
+        <name>Check Catalog Task Status</name>
+        <preview/>
+        <sys_class_name>wf_workflow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-03 01:00:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>561c981a2f63b45048dca1fef699b601</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Check Catalog Task Status</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name>wf_workflow_561c981a2f63b45048dca1fef699b601</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:26:52</sys_updated_on>
+        <table>task</table>
+        <template>false</template>
+        <vars/>
+    </wf_workflow>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Completed</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>1100</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:31:03</sys_created_on>
+        <sys_id>30ee51ae2fa7f45048dca1fef699b69d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:31:03</sys_updated_on>
+        <value>complete</value>
+        <workflow_version display_value="Check Catalog Task Status">38ee51ae2fa7f45048dca1fef699b69b</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Delivery</name>
+        <ola>1970-01-03 00:00:00</ola>
+        <order>140</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:31:03</sys_created_on>
+        <sys_id>bcee51ae2fa7f45048dca1fef699b69c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:31:03</sys_updated_on>
+        <value>delivery</value>
+        <workflow_version display_value="Check Catalog Task Status">38ee51ae2fa7f45048dca1fef699b69b</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Fulfillment</name>
+        <ola>1970-01-02 00:00:00</ola>
+        <order>120</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:31:03</sys_created_on>
+        <sys_id>b0ee51ae2fa7f45048dca1fef699b69d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:31:03</sys_updated_on>
+        <value>fulfillment</value>
+        <workflow_version display_value="Check Catalog Task Status">38ee51ae2fa7f45048dca1fef699b69b</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Request Cancelled</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>1000</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:31:03</sys_created_on>
+        <sys_id>b8ee51ae2fa7f45048dca1fef699b69c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:31:03</sys_updated_on>
+        <value>Request Cancelled</value>
+        <workflow_version display_value="Check Catalog Task Status">38ee51ae2fa7f45048dca1fef699b69b</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Request Approved</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>90</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:31:03</sys_created_on>
+        <sys_id>38ee51ae2fa7f45048dca1fef699b69c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:31:03</sys_updated_on>
+        <value>request_approved</value>
+        <workflow_version display_value="Check Catalog Task Status">38ee51ae2fa7f45048dca1fef699b69b</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Waiting for Approval</name>
+        <ola>1970-01-02 00:00:00</ola>
+        <order>100</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:31:03</sys_created_on>
+        <sys_id>3cee51ae2fa7f45048dca1fef699b69c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:31:03</sys_updated_on>
+        <value>waiting_for_approval</value>
+        <workflow_version display_value="Check Catalog Task Status">38ee51ae2fa7f45048dca1fef699b69b</workflow_version>
+    </wf_stage>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Begin">c7a5e32c0a0a0b3a002377c24ed8ea76</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>1</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>Begin</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:31:03</sys_created_on>
+        <sys_id>38ee51ae2fa7f45048dca1fef699b69d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:31:03</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Check Catalog Task Status">38ee51ae2fa7f45048dca1fef699b69b</workflow_version>
+        <x>20</x>
+        <y>20</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=38ee51ae2fa7f45048dca1fef699b69d"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Begin">38ee51ae2fa7f45048dca1fef699b69d</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:31:03</sys_created_on>
+        <sys_id>7cee51ae2fa7f45048dca1fef699b69d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:31:03</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Run Script">db8c65aec0a8016501d00259bc7203a4</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>4</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Check for Incomplete Tasks</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:34:24</sys_created_on>
+        <sys_id>5b1f95ae2fa7f45048dca1fef699b6a7</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:37:43</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Check Catalog Task Status">38ee51ae2fa7f45048dca1fef699b69b</workflow_version>
+        <x>361</x>
+        <y>23</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=5b1f95ae2fa7f45048dca1fef699b6a7"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>5b1f95ae2fa7f45048dca1fef699b6a7</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:34:24</sys_created_on>
+        <sys_id>f9af196e2fa7f45048dca1fef699b64c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:36:35</sys_updated_on>
+        <value>(function() {&#13;
+    workflow.scratchpad.return_value = new x_58056_rf.RequestFulfillment().checkForIncompleteTasks(current.getUniqueValue()) ? "incomplete" : "complete";&#13;
+})();</value>
+        <variable display_value="Script">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>5b1f95ae2fa7f45048dca1fef699b6a7</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:34:24</sys_created_on>
+        <sys_id>f9af196e2fa7f45048dca1fef699b64c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:36:35</sys_updated_on>
+        <value>(function() {&#13;
+    workflow.scratchpad.return_value = new x_58056_rf.RequestFulfillment().checkForIncompleteTasks(current.getUniqueValue()) ? "incomplete" : "complete";&#13;
+})();</value>
+        <variable display_value="Script">c35ddef20a0a0ba96248a7090eccd518</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Check for Incomplete Tasks">5b1f95ae2fa7f45048dca1fef699b6a7</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:34:24</sys_created_on>
+        <sys_id>79af196e2fa7f45048dca1fef699b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:34:24</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="End">c7a66f7d0a0a0b3a004544a6d2f14076</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>2</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>End</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:31:04</sys_created_on>
+        <sys_id>74ee51ae2fa7f45048dca1fef699b69e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:37:47</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Check Catalog Task Status">38ee51ae2fa7f45048dca1fef699b69b</workflow_version>
+        <x>785</x>
+        <y>21</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=74ee51ae2fa7f45048dca1fef699b69e"/>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Return Value">9b2dba250a0a0b6400396e341ba9d9a4</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>5</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Set return value</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:36:58</sys_created_on>
+        <sys_id>2720a5ae2fa7f45048dca1fef699b688</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:37:46</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Check Catalog Task Status">38ee51ae2fa7f45048dca1fef699b69b</workflow_version>
+        <x>582</x>
+        <y>22</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=2720a5ae2fa7f45048dca1fef699b688"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>2720a5ae2fa7f45048dca1fef699b688</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:36:58</sys_created_on>
+        <sys_id>2330e5ee2fa7f45048dca1fef699b624</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:37:29</sys_updated_on>
+        <value>${workflow.scratchpad.return_value}</value>
+        <variable display_value="Value">9b2e2cdf0a0a0b6400b2257f77a7db13</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>2720a5ae2fa7f45048dca1fef699b688</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:36:58</sys_created_on>
+        <sys_id>2330e5ee2fa7f45048dca1fef699b624</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:37:29</sys_updated_on>
+        <value>${workflow.scratchpad.return_value}</value>
+        <variable display_value="Value">9b2e2cdf0a0a0b6400b2257f77a7db13</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Set return value">2720a5ae2fa7f45048dca1fef699b688</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:36:58</sys_created_on>
+        <sys_id>eb30e5ee2fa7f45048dca1fef699b624</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:36:58</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Wait for condition">d93a02ae0a0a0aa30077abad3fdac035</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>3</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Wait for all tasks to complete</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:31:04</sys_created_on>
+        <sys_id>7cee51ae2fa7f45048dca1fef699b69e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:35:09</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Check Catalog Task Status">38ee51ae2fa7f45048dca1fef699b69b</workflow_version>
+        <x>148</x>
+        <y>22</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=7cee51ae2fa7f45048dca1fef699b69e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>7cee51ae2fa7f45048dca1fef699b69e</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:31:04</sys_created_on>
+        <sys_id>b0ee51ae2fa7f45048dca1fef699b69f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:31:04</sys_updated_on>
+        <value/>
+        <variable display_value="Condition">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>7cee51ae2fa7f45048dca1fef699b69e</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:31:04</sys_created_on>
+        <sys_id>fcee51ae2fa7f45048dca1fef699b69e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:35:09</sys_updated_on>
+        <value>(function() {&#13;
+    return ! new x_58056_rf.RequestFulfillment().checkForOpenTasks(current.getUniqueValue());&#13;
+})();</value>
+        <variable display_value="Condition script">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>7cee51ae2fa7f45048dca1fef699b69e</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:31:04</sys_created_on>
+        <sys_id>b0ee51ae2fa7f45048dca1fef699b69f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:31:04</sys_updated_on>
+        <value/>
+        <variable display_value="Condition">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>7cee51ae2fa7f45048dca1fef699b69e</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:31:04</sys_created_on>
+        <sys_id>fcee51ae2fa7f45048dca1fef699b69e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:35:09</sys_updated_on>
+        <value>(function() {&#13;
+    return ! new x_58056_rf.RequestFulfillment().checkForOpenTasks(current.getUniqueValue());&#13;
+})();</value>
+        <variable display_value="Condition script">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Wait for all tasks to complete">7cee51ae2fa7f45048dca1fef699b69e</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:31:04</sys_created_on>
+        <sys_id>b4ee51ae2fa7f45048dca1fef699b69f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:31:04</sys_updated_on>
+    </wf_condition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">eb30e5ee2fa7f45048dca1fef699b624</condition>
+        <from display_value="Set return value">2720a5ae2fa7f45048dca1fef699b688</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:37:38</sys_created_on>
+        <sys_id>096021222fe7f45048dca1fef699b68c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:37:38</sys_updated_on>
+        <to display_value="End">74ee51ae2fa7f45048dca1fef699b69e</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">79af196e2fa7f45048dca1fef699b64d</condition>
+        <from display_value="Check for Incomplete Tasks">5b1f95ae2fa7f45048dca1fef699b6a7</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:37:33</sys_created_on>
+        <sys_id>3b50adee2fa7f45048dca1fef699b6a8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:37:33</sys_updated_on>
+        <to display_value="Set return value">2720a5ae2fa7f45048dca1fef699b688</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">7cee51ae2fa7f45048dca1fef699b69d</condition>
+        <from display_value="Begin">38ee51ae2fa7f45048dca1fef699b69d</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:31:04</sys_created_on>
+        <sys_id>b8ee51ae2fa7f45048dca1fef699b6a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:31:04</sys_updated_on>
+        <to display_value="Wait for all tasks to complete">7cee51ae2fa7f45048dca1fef699b69e</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">b4ee51ae2fa7f45048dca1fef699b69f</condition>
+        <from display_value="Wait for all tasks to complete">7cee51ae2fa7f45048dca1fef699b69e</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:31:04</sys_created_on>
+        <sys_id>f4ee51ae2fa7f45048dca1fef699b6a0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:34:34</sys_updated_on>
+        <to display_value="Check for Incomplete Tasks">5b1f95ae2fa7f45048dca1fef699b6a7</to>
+    </wf_transition>
+    <wf_estimated_runtime_config action="INSERT_OR_UPDATE">
+        <estimated_run_time/>
+        <no_of_data_points>1</no_of_data_points>
+        <percentage_threshold_ert>20</percentage_threshold_ert>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-11-04 00:31:03</sys_created_on>
+        <sys_id>b8ee51ae2fa7f45048dca1fef699b69b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-11-04 00:31:03</sys_updated_on>
+        <workflow_version display_value="Check Catalog Task Status">38ee51ae2fa7f45048dca1fef699b69b</workflow_version>
+    </wf_estimated_runtime_config>
+    <wf_workflow_version action="update_multiple" query="workflow=561c981a2f63b45048dca1fef699b601^sys_id!=38ee51ae2fa7f45048dca1fef699b69b">
+        <published>false</published>
+    </wf_workflow_version>
+</record_update>

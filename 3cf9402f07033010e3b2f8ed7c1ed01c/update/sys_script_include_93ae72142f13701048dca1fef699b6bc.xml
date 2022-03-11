@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_58056_rf.RequestFulfillment</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>RequestFulfillment</name>
+        <script><![CDATA[var RequestFulfillment = Class.create();
+
+RequestFulfillment.prototype = {
+  TYPE_TASK: "task",
+  TYPE_APPROVAL: "approval",
+  TYPE_MGR_APPROVAL: "manager_approval",
+  TASK_TYPE_BEFORE: "task_before_appr",
+  TASK_TYPE_AFTER: "task_after_appr",
+  TASK_TYPE_BETWEEN: "task_between_appr",
+  APPROVAL_TYPE_GROUP: "groupAppr",
+  APPROVAL_TYPE_USER: "userAppr",
+  APPROVAL_TYPE_USER_AND_GROUP: "userAndGroupAppr",
+  WAIT_FOR_ANYONE_TO_APPROVE: "any",
+  WAIT_FOR_EVERYONE_TO_APPROVE: "all",
+  /**
+   * Initialize variables
+   */
+  initialize: function () {
+    this.loggingLevel = gs.getProperty("x_58056_rf.logging_level", "debug");
+    this.logDebug = this.loggingLevel == "debug";
+    this.logInfo = this.loggingLevel == "info" || this.logDebug;
+    this.logWarnings = this.loggingLevel == "warn" || this.logInfo;
+    this.logErrors = this.loggingLevel == "error" || this.logWarnings;
+
+    this.evaluator = new GlideScopedEvaluator();
+  },
+
+  /**
+   * Builds an ordered list of workflow activities
+   * that will be used by the Request Fulfillment process
+   *
+   * @param {GlideRecord} reqItemGR
+   * @returns {array} Ordered list of activities that the workflow should run
+   */
+  getActivityList: function (reqItemGR) {
+    var rfGR = this.getRequestFulfillment(reqItemGR.cat_item.toString());
+    return this._getActivityList(rfGR);
+  },
+
+  getRequestFulfillment: function (catItemID) {
+    var rfGR = new GlideRecord("x_58056_rf_request_fulfillment");
+    rfGR.addQuery("catalog_item", catItemID);
+    rfGR.addQuery("type", "main");
+    rfGR.addActiveQuery();
+    rfGR.query();
+    if (rfGR.next()) {
+      return rfGR;
+    }
+    return null;
+  },
+
+  getRequestFulfillmentByID: function (sysID) {
+    var rfGR = new GlideRecord("x_58056_rf_request_fulfillment");
+    if (rfGR.get(sysID)) {
+      return rfGR;
+    }
+    return null;
+  },
+
+  _getActivityList: function (rfGR) {
+    var activityList = [];
+
+    var activities = this._getActivities(rfGR);
+
+    // Compress activity list to reduce Flow processing
+    var prevType = "";
+    var activitySets = [];
+    activities.forEach(function (activity, index) {
+      this._log("Activities " + index + " type=" + activity.type + " activities=" + activity.activitySets);
+      if (activity.type != prevType) {
+        if (activitySets.length > 0) {
+          activityList.push({ type: prevType, activitySets: activitySets });
+        }
+        activitySets = [];
+      }
+      prevType = activity.type;
+      // Push a comma-delimited string of activity sys_ids
+      activitySets.push(activity.activitySets.join(","));
+    }, this);
+
+    if (activitySets.length > 0) {
+      activityList.push({ type: prevType, activitySets: activitySets });
+    }
+
+    activityList.forEach(function (activity, index) {
+      this._log("activityList " + index + " type=" + activity.type + " activities=" + activity.activitySets);
+    }, this);
+
+    return activityList;
+  },
+
+  _getActivities: function (rfGR) {
+    var activities = [];
+
+    if (gs.nil(rfGR)) {
+      this._logError("Request Fulfillment Configuration missing.");
+      return activities;
+    }
+
+    //Getting Approval details
+    var prevOrder = "";
+    var prevType = "";
+
+    var activityGR = new GlideRecord("x_58056_rf_activity");
+    activityGR.addQuery("definition", rfGR.getUniqueValue());
+    activityGR.addActiveQuery();
+    activityGR.orderBy("order");
+    activityGR.query();
+    var orderActivities = [];
+    while (activityGR.next()) {
+      // Only tasks can be run in parallel if they have the same order
+      // If the order has changed then add tasks for that order to main list
+      // and reset order tasks
+      if (activityGR.type.toString() != "task" || prevType != "task" || activityGR.order.toString() != prevOrder) {
+        if (orderActivities.length > 0) {
+          activities.push({ type: prevType, activitySets: orderActivities });
+        }
+        orderActivities = [];
+      }
+      prevOrder = activityGR.order.toString();
+      prevType = activityGR.type.toString();
+
+      if (activityGR.type.toString() == "integration" || activityGR.type.toString() == "subflow") {
+        var rfID = activityGR.type.toString() == "integration" ? activityGR.integration_flow.toString() : activityGR.subflow.toString();
+        var subRFGR = this.getRequestFulfillmentByID(rfID);
+        if (!gs.nil(subRFGR)) {
+          var subActivities = this._getActivities(subRFGR);
+          subActivities.forEach(function (subActivity, index) {
+            activities.push(subActivity);
+          }, this);
+        } else {
+          this._logError("Could not find Request Fulfillment Configuration for " + rfID);
+        }
+      } else {
+        orderActivities.push(activityGR.getUniqueValue());
+      }
+    }
+
+    if (orderActivities.length > 0) {
+      activities.push({ type: activityGR.type.toString(), activitySets: orderActivities });
+    }
+    return activities;
+  },
+
+  processRunScriptActivity: function (reqItemGR, activityID) {
+    var result = { condition: true, display: "", status: "not_found" };
+    var activityGR = this._getActivityRecord(activityID, "run_script");
+    if (!gs.nil(activityGR)) {
+      result.display = activityGR.getDisplayValue();
+      result.condition = this._checkActivityCondition(reqItemGR, activityGR);
+      if (result.condition && !activityGR.script.nil()) {
+        this.evaluator.putVariable("current", reqItemGR);
+        this.evaluator.evaluateScript(activityGR, "script", "");
+        result.status = "complete";
+      } else {
+        result.status = "not_required";
+      }
+    }
+    return result;
+  },
+
+  processSetValuesActivity: function (reqItemGR, activityID) {
+    var result = { condition: true, display: "", status: "not_found" };
+    var activityGR = this._getActivityRecord(activityID, "set_values");
+    if (!gs.nil(activityGR)) {
+      result.display = activityGR.getDisplayValue();
+      result.condition = this._checkActivityCondition(reqItemGR, activityGR);
+      if (result.condition) {
+        var needsUpdate = false;
+        // Update variables
+        if (!activityGR.variable_values.nil()) {
+          for (var name in activityGR.variable_values) {
+            var variableValues = reqItemGR.variables.getVariablesValue();
+            if (variableValues.indexOf(name) >= 0) {
+              var value = activityGR.variable_values[name];
+              reqItemGR.variables[name] = value;
+              needsUpdate = true;
+            }
+          }
+        }
+
+        // Update fields
+        if (!activityGR.field_values.nil()) {
+          reqItemGR.applyEncodedQuery(activityGR.field_values);
+          needsUpdate = true;
+        }
+
+        // Run the advanced script
+        if (activityGR.advanced && !activityGR.script.nil()) {
+          this.evaluator.putVariable("current", reqItemGR);
+          this.evaluator.evaluateScript(activityGR, "script", "");
+          needsUpdate = true;
+        }
+        if (needsUpdate) {
+          result.status = "complete";
+          reqItemGR.update();
+        } else {
+          result.status = "nothing_changed";
+        }
+      } else {
+        result.status = "not_required";
+      }
+    }
+    return result;
+  },
+
+  processFlowActivity: function (reqItemGR, activityID) {
+    var result = { condition: true, display: "", subType: "", context_id: "", outputs: null, status: "not_found" };
+    var activityGR = this._getActivityRecord(activityID, "flow_designer");
+    if (!gs.nil(activityGR)) {
+      result.display = activityGR.getDisplayValue();
+      result.condition = this._checkActivityCondition(reqItemGR, activityGR);
+      result.subType = activityGR.subtype.toString();
+      if (result.condition) {
+        // Build the flow inputs
+        var inputs = {};
+        if (!activityGR.script.nil()) {
+          // See what the script returns
+          this.evaluator.putVariable("current", reqItemGR);
+          this.evaluator.putVariable("inputs", inputs);
+          this.evaluator.evaluateScript(activityGR, "script");
+          inputs = this.evaluator.getVariable("inputs");
+        }
+
+        if (result.subType == "subflow") {
+          if (!activityGR.run_subflow.nil()) {
+            var subflowName = activityGR.run_subflow.sys_scope.scope.toString() + "." + activityGR.run_subflow.internal_name.toString();
+            var subflowResult = sn_fd.FlowAPI.getRunner().subflow(subflowName).inForeground().withInputs(inputs).run();
+            result.context_id = subflowResult.getContextId();
+            result.outputs = subflowResult.getOutputs();
+            result.status = "complete";
+          }
+        } else {
+          if (!activityGR.run_action.nil()) {
+            var actionName = activityGR.run_action.sys_scope.scope.toString() + "." + activityGR.run_action.internal_name.toString();
+            var actionResult = sn_fd.FlowAPI.getRunner().action(actionName).inForeground().withInputs(inputs).run();
+            result.context_id = actionResult.getContextId();
+            result.outputs = actionResult.getOutputs();
+            result.status = "complete";
+          }
+        }
+      } else {
+        result.status = "not_required";
+      }
+    }
+    return result;
+  },
+
+  processWorkflowActivity: function (reqItemGR, activityID) {
+    var result = { condition: true, display: "", context_id: "", status: "not_found" };
+    var activityGR = this._getActivityRecord(activityID, "workflow");
+    if (!gs.nil(activityGR)) {
+      result.display = activityGR.getDisplayValue();
+      result.condition = this._checkActivityCondition(reqItemGR, activityGR);
+      if (result.condition && !activityGR.run_workflow.nil()) {
+        // Build the scratchpad
+        var scratchpad = {};
+        if (!activityGR.script.nil()) {
+          // See what the script returns
+          this.evaluator.putVariable("current", reqItemGR);
+          this.evaluator.putVariable("scratchpad", scratchpad);
+          this.evaluator.evaluateScript(activityGR, "script");
+          scratchpad = this.evaluator.getVariable("scratchpad");
+        }
+  
+        result.context_id = new global.Workflow().startFlow(activityGR.run_workflow.toString(), reqItemGR, null, scratchpad);
+        result.status = "complete";
+      } else {
+        result.status = "not_required";
+      }
+    }
+    return result;
+  },
+
+  _getActivityRecord: function (activityID, type) {
+    var activityGR = new GlideRecord("x_58056_rf_activity");
+    activityGR.addActiveQuery();
+    activityGR.addQuery("sys_id", activityID);
+    activityGR.addQuery("type", type);
+    activityGR.query();
+    if (activityGR.next()) {
+      return activityGR;
+    }
+    return null;
+  },
+
+  _checkActivityCondition: function (reqItemGR, activityGR) {
+    var condition = true;
+    if (!activityGR.variables_conditions.nil()) {
+      var variableValues = reqItemGR.variables.getVariablesValue();
+      for (var name in activityGR.variables_conditions) {
+        if (variableValues.indexOf(name) >= 0) {
+          var value = activityGR.variables_conditions[name];
+          if (reqItemGR.variables[name].toString() != value) {
+            condition = false;
+            break;
+          }
+        } else {
+          this._logWarning(
+            "Variable " + name + " referenced on Run Script activity but does not exist on Request Item " + reqItemGR.getDisplayValue()
+          );
+        }
+      }
+    }
+
+    if (condition && !activityGR.field_conditions.nil()) {
+      condition = GlideFilter.checkRecord(reqItemGR, activityGR.field_conditions.toString());
+    }
+
+    if (condition && activityGR.advanced_condition && !activityGR.condition_script.nil()) {
+      this.evaluator.putVariable("current", reqItemGR);
+      condition = this.evaluator.evaluateScript(activityGR, "condition_script", "") == true;
+    }
+    return condition;
+  },
+
+  getApprovalDetails: function (reqItemGR, activityID) {
+    var result = { condition: true, display: "", groups: [], users: [], subType: "", skip: "", waitFor: this.WAIT_FOR_ANYONE_TO_APPROVE };
+    var apprGR = this._getActivityRecord(activityID, "approval");
+    if (!gs.nil(apprGR)) {
+      result.display = apprGR.getDisplayValue();
+      result.condition = this._checkActivityCondition(reqItemGR, apprGR);
+      if (result.condition) {
+        result.subType = apprGR.subtype.toString();
+
+        var scriptUsers = [];
+        var scriptGroups = [];
+        if (apprGR.advanced) {
+          // See what the script returns
+          this.evaluator.putVariable("current", reqItemGR);
+          this.evaluator.putVariable("users", []);
+          this.evaluator.putVariable("groups", []);
+          this.evaluator.evaluateScript(apprGR, "script");
+          scriptUsers = this.evaluator.getVariable("users");
+          scriptGroups = this.evaluator.getVariable("groups");
+        }
+
+        if (result.subType == "manager") {
+          result.skip = apprGR.skip_approval_when_requested_by_is_manager ? "true" : "false";
+          result.users = this._getManager(reqItemGR, apprGR, scriptUsers);
+        } else if (result.subType == "group" || result.subType == "both") {
+          result.groups = this._getApprovalGroups(apprGR, scriptGroups);
+        } else if (result.subType == "user" || result.subType == "both") {
+          if (!apprGR.u_wait_for.nil()) {
+            result.waitFor = apprGR.u_wait_for.toString();
+          }
+          result.users = this._getApprovalUsers(apprGR, scriptUsers);
+        }
+      }
+    } else {
+      result.condition = false;
+    }
+    return result;
+  },
+
+  /**
+   * Get the details for one or more Request Fulfillment task activities
+   *
+   * @param {GlideRecord} reqItemGR Request item record
+   * @param {array} taskIDs  Array of Request Fulfillment task sys_ids
+   * @returns {array} Array of task details to be used for creating catalog task records
+   */
+  getTaskDetails: function (reqItemGR, taskIDs) {
+    var taskDetails = [];
+    var taskGR = new GlideRecord("x_58056_rf_activity");
+    taskGR.addQuery("sys_id", taskIDs);
+    taskGR.addQuery("active", true);
+    taskGR.query();
+    while (taskGR.next()) {
+      var taskDetail = {
+        condition: true,
+        display: "",
+        assignment_group: "",
+        short_description: "",
+        description: "",
+        fieldValues: {},
+        incomplete_action: "ignore",
+      };
+      taskDetail.display = taskGR.getDisplayValue();
+      taskDetail.condition = this._checkActivityCondition(reqItemGR, taskGR);
+      if (taskDetail.condition) {
+        //Set assignment group
+        if (!taskGR.assignment_group.nil()) {
+          taskDetail.assignment_group = taskGR.assignment_group.toString();
+        }
+
+        //Set short description
+        if (!taskGR.short_description.nil()) {
+          taskDetail.short_description = taskGR.short_description.toString();
+        }
+
+        //Set description
+        if (!taskGR.description.nil()) {
+          taskDetail.description = taskGR.description.toString();
+        }
+
+        // If a script is to be run
+        if (taskGR.advanced) {
+          var newTaskGR = new GlideRecord("sc_task");
+          newTaskGR.initialize();
+
+          // See what the script returns
+          this.evaluator.putVariable("current", reqItemGR);
+          this.evaluator.putVariable("taskValues", {});
+          this.evaluator.evaluateScript(taskGR, "script");
+          var taskValues = this.evaluator.getVariable("taskValues");
+          for (fieldName in taskValues) {
+            if (!gs.nil(taskValues[fieldName]) && newTaskGR.isValidField(fieldName)) {
+              taskDetail.fieldValues[fieldName] = taskValues[fieldName];
+            }
+          }
+        }
+
+        // Set work type
+        taskDetail.incomplete_action = taskGR.action_when_closed_incomplete.toString();
+      }
+      taskDetails.push(taskDetail);
+    }
+    return taskDetails;
+  },
+
+  /**
+   * Creates one or more catalog tasks
+   *
+   * @param {GlideRecord} reqItemGR Request item record
+   * @param {*} taskDetails Array of task details to be used for creating catalog task records
+   * @returns {array} Array of catalog task sys_id values
+   */
+  createTasks: function (reqItemGR, taskDetails) {
+    var taskIDs = [];
+    taskDetails.forEach(function (taskDetail) {
+      if (taskDetail.condition == true) {
+        var newTaskGR = new GlideRecord("sc_task");
+        newTaskGR.initialize();
+        newTaskGR.request_item = reqItemGR.getUniqueValue();
+
+        if (!gs.nil(taskDetail.assignment_group)) {
+          newTaskGR.assignment_group = taskDetail.assignment_group;
+        }
+        if (!gs.nil(taskDetail.short_description)) {
+          newTaskGR.short_description = taskDetail.short_description;
+        }
+        if (!gs.nil(taskDetail.description)) {
+          newTaskGR.description = taskDetail.description;
+        }
+        for (fieldName in taskDetail.fieldValues) {
+          newTaskGR[fieldName] = taskDetail.fieldValues[fieldName];
+        }
+
+        taskIDs.push(newTaskGR.insert());
+      } else {
+        this._debug("Task " + taskDetail.display + " skipped due to task configuration condition");
+      }
+    }, this);
+    return taskIDs;
+  },
+
+  /**
+   * Returns true if a requested item has open catalog tasks
+   *
+   * @param {string} reqItemID
+   * @param {array} taskIDs - Optional. Used to limit check to a subset of tasks
+   * @returns {boolean} - true if request item has open tasks, false otherwise.
+   */
+  checkForOpenTasks: function (reqItemID, taskIDs) {
+    var taskGR = new GlideRecord("sc_task");
+    taskGR.addQuery("request_item", reqItemID);
+    taskGR.addActiveQuery();
+    if (!gs.nil(taskIDs) && taskIDs.length > 0) {
+      taskGR.addQuery("sys_id", taskIDs);
+    }
+    taskGR.query();
+    return taskGR.hasNext();
+  },
+
+  /**
+   * Returns true if a requested item has open catalog tasks
+   *
+   * @param {string} reqItemID
+   * @param {array} taskIDs - Optional. Used to limit check to a subset of tasks
+   * @returns {boolean} - true if request item has open tasks, false otherwise.
+   */
+  checkForIncompleteTasks: function (reqItemID, taskIDs) {
+    var taskGR = new GlideRecord("sc_task");
+    taskGR.addQuery("request_item", reqItemID);
+    taskGR.addQuery("state", "4");
+    if (!gs.nil(taskIDs) && taskIDs.length > 0) {
+      taskGR.addQuery("sys_id", taskIDs);
+    }
+    taskGR.query();
+    return taskGR.hasNext();
+  },
+
+  _userIsActive: function (userID) {
+    var userGR = new GlideRecord("sys_user");
+    return userGR.get(userID) && userGR.active;
+  },
+
+  _getManager: function (reqItemGR, apprGR, scriptUsers) {
+    // Manager defaults to requested for user's manager but script can override that
+    var manager = [];
+    var mgrApprover = reqItemGR.request.requested_for.manager.nil() ? "" : reqItemGR.request.requested_for.manager.toString();
+    if (apprGR.advanced) {
+      if (Array.isArray(scriptUsers)) {
+        if (scriptUsers.length > 0) {
+          mgrApprover = scriptUsers[0];
+        }
+      } else if ((typeof scriptUsers === "string" || scriptUsers instanceof String) && !gs.nil(scriptUsers)) {
+        mgrApprover = scriptUsers;
+      }
+    }
+    if (
+      (!apprGR.skip_approval_when_requested_by_is_manager || mgrApprover != reqItemGR.request.opened_by.toString()) &&
+      !gs.nil(mgrApprover)
+    ) {
+      manager.push(mgrApprover);
+    }
+    return manager;
+  },
+
+  _getApprovalGroups: function (apprGR, scriptGroups) {
+    var allGroups = [];
+    var groups = null;
+
+    if (apprGR.advanced) {
+      if (Array.isArray(scriptGroups)) {
+        if (scriptGroups.length > 0) {
+          allGroups = allGroups.concat(scriptGroups);
+        }
+      } else if ((typeof scriptGroups === "string" || scriptGroups instanceof String) && !gs.nil(scriptGroups)) {
+        allGroups.push(scriptGroups);
+      }
+    }
+
+    // Add in group list
+    if (!apprGR.groups.nil()) {
+      groups = apprGR.groups.toString().split(",");
+      allGroups = allGroups.concat(groups);
+    }
+
+    // Only include groups that have at least one active user
+    groups = {};
+    var grpMbrGR = new GlideRecord("sys_user_grmember");
+    grpMbrGR.addQuery("group", allGroups);
+    grpMbrGR.addQuery("user.active", true);
+    grpMbrGR.query();
+    while (grpMbrGR.next()) {
+      if (!(grpMbrGR.group.toString() in groups)) {
+        groups[grpMbrGR.group.toString()] = true;
+      }
+    }
+    var approverGroups = [];
+    for (groupID in groups) {
+      approverGroups.push(groupID);
+    }
+
+    return approverGroups;
+  },
+
+  _getApprovalUsers: function (apprGR, scriptUsers) {
+    var allUsers = [];
+    var users = null;
+
+    if (apprGR.advanced) {
+      if (Array.isArray(scriptUsers)) {
+        if (scriptUsers.length > 0) {
+          allUsers = allGroups.concat(scriptUsers);
+        }
+      } else if ((typeof scriptUsers === "string" || scriptUsers instanceof String) && !gs.nil(scriptUsers)) {
+        allUsers.push(scriptUsers);
+      }
+    }
+
+    // Add in user list
+    if (!apprGR.users.nil()) {
+      users = apprGR.users.toString().split(",");
+      allUsers = allUsers.concat(users);
+    }
+
+    // Only include users that are active
+    var approverUsers = [];
+    var userGR = new GlideRecord("sys_user");
+    userGR.addQuery("sys_id", allUsers);
+    userGR.addActiveQuery();
+    userGR.query();
+    while (userGR.next()) {
+      approverUsers.push(userGR.getUniqueValue());
+    }
+    return approverUsers;
+  },
+
+  /**
+   * Removes the workflow activity value on existing approvals
+   * This is needed because otherwise previous approvals are removed
+   * if new ones are created by the same workflow activity
+   *
+   * @param {String} ritmID Request Item sys_id
+   */
+  retainApprovals: function (ritmID) {
+    var approverGR = new GlideRecord("sysapproval_approver");
+    approverGR.addQuery("sysapproval", ritmID);
+    approverGR.addQuery("state", "!=", "cancelled");
+    approverGR.addNotNullQuery("wf_activity");
+    approverGR.query();
+    approverGR.setValue("wf_activity", "NULL");
+    approverGR.updateMultiple();
+
+    approverGR = new GlideRecord("sysapproval_approver");
+    approverGR.addQuery("sysapproval", ritmID);
+    approverGR.addQuery("state", "!=", "cancelled");
+    approverGR.addNotNullQuery("wf_activity");
+    approverGR.query();
+    this._debug("After approver update. Rows with workflow activity=" + approverGR.getRowCount());
+
+    var groupGR = new GlideRecord("sysapproval_group");
+    groupGR.addQuery("parent", ritmID);
+    groupGR.addQuery("approval", "!=", "cancelled");
+    groupGR.addNotNullQuery("wf_activity");
+    groupGR.query();
+    groupGR.setValue("wf_activity", "NULL");
+    groupGR.updateMultiple();
+
+    groupGR = new GlideRecord("sysapproval_group");
+    groupGR.addQuery("parent", ritmID);
+    groupGR.addQuery("approval", "!=", "cancelled");
+    groupGR.addNotNullQuery("wf_activity");
+    groupGR.query();
+    this._debug("After group approval update. Rows with workflow activity=" + groupGR.getRowCount());
+  },
+
+  /**
+   * Adds an error message to the system log
+   * if the logging level is at least "error".
+   *
+   * @param {string} msg Message to add to system log.
+   */
+  _logError: function (msg) {
+    if (this.logErrors) {
+      gs.error("[" + this.type + "] " + msg);
+    }
+  },
+
+  /**
+   * Adds a warning message to the system log.
+   *
+   * @param {string} msg Message to add to the system log.
+   */
+  _logWarning: function (msg) {
+    if (this.logWarnings) {
+      gs.warn("[" + this.type + "] " + msg);
+    }
+  },
+
+  /**
+   * Adds a message to the system log if logging level is at least info.
+   *
+   * @param {String} msg Message to add to the system log.
+   */
+  _log: function (msg) {
+    if (this.logInfo) {
+      gs.info("[" + this.type + "] " + msg);
+    }
+  },
+
+  /**
+   * Adds a message to the system log if logging level is at least debug.
+   *
+   * @param {String} msg Message to add to the system log.
+   */
+  _debug: function (msg) {
+    if (this.logDebug) {
+      gs.info("[" + this.type + "] " + msg);
+    }
+  },
+
+  type: "RequestFulfillment",
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-15 21:28:32</sys_created_on>
+        <sys_id>93ae72142f13701048dca1fef699b6bc</sys_id>
+        <sys_mod_count>38</sys_mod_count>
+        <sys_name>RequestFulfillment</sys_name>
+        <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name>sys_script_include_93ae72142f13701048dca1fef699b6bc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-02-16 01:46:43</sys_updated_on>
+    </sys_script_include>
+</record_update>
