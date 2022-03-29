@@ -57,6 +57,8 @@
     if (!current.run_workflow.nil()) {
       displayName += current.run_workflow.getDisplayValue();
     }
+  } else if (current.type.toString() == "wait_for") {
+    displayName += ": " + current.subtype.getDisplayValue();
   } else if (current.type.toString() == "flow_designer") {
     displayName = current.subtype.getDisplayValue() + ": ";
 	if (! current.run_subflow.nil()) {
@@ -74,7 +76,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7e335a8407533010e3b2f8ed7c1ed0aa</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_name>Set display value</sys_name>
         <sys_overrides/>
         <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
@@ -82,7 +84,7 @@
         <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
         <sys_update_name>sys_script_7e335a8407533010e3b2f8ed7c1ed0aa</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-01-21 00:44:30</sys_updated_on>
+        <sys_updated_on>2022-03-28 18:27:36</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>

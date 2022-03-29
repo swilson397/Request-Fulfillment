@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
     <sys_ui_policy action="INSERT_OR_UPDATE">
         <active>true</active>
-        <conditions table="x_58056_rf_activity">type=approval^ORtype=flow_designer^ORtype=wait_for^EQ<item display_value="Approval" endquery="false" field="type" goto="false" newquery="false" operator="=" or="false" value="approval"/>
-            <item display_value="Flow Designer" endquery="false" field="type" goto="false" newquery="false" operator="=" or="true" value="flow_designer"/>
-            <item display_value="Wait for" endquery="false" field="type" goto="false" newquery="false" operator="=" or="true" value="wait_for"/>
+        <conditions table="x_58056_rf_activity">type=wait_for^EQ<item display_value="Wait for" endquery="false" field="type" goto="false" newquery="false" operator="=" or="false" value="wait_for"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </conditions>
         <description/>
@@ -15,30 +13,30 @@
         <on_load>true</on_load>
         <order>100</order>
         <reverse_if_false>true</reverse_if_false>
-        <run_scripts>false</run_scripts>
+        <run_scripts>true</run_scripts>
         <script_false><![CDATA[function onCondition() {
-
+    g_form.setSectionDisplay("wait_for", false);
 }]]></script_false>
         <script_true><![CDATA[function onCondition() {
-
+    g_form.setSectionDisplay("wait_for", true);
 }]]></script_true>
         <set_values/>
-        <short_description>Show Subtype</short_description>
+        <short_description>Type is Wait for</short_description>
         <sys_class_name>sys_ui_policy</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2021-10-13 23:45:23</sys_created_on>
+        <sys_created_on>2022-03-25 17:28:17</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>58fa453f07873010e3b2f8ed7c1ed04c</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_name>Show Subtype</sys_name>
+        <sys_id>94ef87082fa64d1048dca1fef699b65c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Type is Wait for</sys_name>
         <sys_overrides/>
         <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
         <sys_policy/>
         <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
-        <sys_update_name>sys_ui_policy_58fa453f07873010e3b2f8ed7c1ed04c</sys_update_name>
+        <sys_update_name>sys_ui_policy_94ef87082fa64d1048dca1fef699b65c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2022-03-28 18:22:36</sys_updated_on>
+        <sys_updated_on>2022-03-28 18:21:33</sys_updated_on>
         <table>x_58056_rf_activity</table>
         <ui_type>0</ui_type>
         <view/>
