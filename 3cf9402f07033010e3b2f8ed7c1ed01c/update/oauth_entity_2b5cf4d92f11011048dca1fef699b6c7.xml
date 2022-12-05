@@ -7,7 +7,7 @@
         <auth_url>https://accounts.google.com/o/oauth2/auth</auth_url>
         <certificate_url/>
         <client_id>872854022440-ru552rbjm7o425h54lu5cdl2snnep9ub.apps.googleusercontent.com</client_id>
-        <client_secret>53Bbi1OeKUQZgCVRlqfbdV4Wi+0qSsgWHGfxgD2+SueS8lZ1PIrplA==</client_secret>
+        <client_secret>﷞﷟﷒2286c4de2fbb011048dca1fef699b687﷬﷔1﷬﷭A5Qq6ml1q8c5qDHPdVWRsg==1uKxyAfB062uGmdDGk3U7F6y2RoWomr_dBhACR85eJ54aWckyrLJhrKW6IaEsAf_gS_J﷮﷯</client_secret>
         <client_uuid>a75cf4d92f11011048dca1fef699b6c7</client_uuid>
         <code_challenge_method>S256</code_challenge_method>
         <comments/>
@@ -22,6 +22,7 @@
         <redirect_url>https://dev12292.service-now.com/oauth_redirect.do</redirect_url>
         <refresh_token_lifespan>8640000</refresh_token_lifespan>
         <refresh_token_url/>
+        <restricted_binding>false</restricted_binding>
         <revoke_token_url>https://accounts.google.com/o/oauth2/revoke</revoke_token_url>
         <salt>0</salt>
         <send_client_credentials_as>request_body_parameter</send_client_credentials_as>

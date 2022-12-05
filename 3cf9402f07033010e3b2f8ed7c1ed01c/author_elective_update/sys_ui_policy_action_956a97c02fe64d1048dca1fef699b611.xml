@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>wait_condition</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-25 18:14:34</sys_created_on>
+        <sys_id>956a97c02fe64d1048dca1fef699b611</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>wait_condition</sys_name>
+        <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name>sys_ui_policy_action_956a97c02fe64d1048dca1fef699b611</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-25 18:24:32</sys_updated_on>
+        <table>x_58056_rf_activity</table>
+        <ui_policy display_value="Type is Condition">78e45b482fa64d1048dca1fef699b6f0</ui_policy>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</application>
+        <file_path/>
+        <instance_id>2570b4f36f4fb1006626a9cc5d3ee464</instance_id>
+        <instance_name>dev12292</instance_name>
+        <name>sys_ui_policy_action_956a97c02fe64d1048dca1fef699b611</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>ignore</disabled><field>wait_condition</field><mandatory>true</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2022-03-25 18:14:34</sys_created_on><sys_id>956a97c02fe64d1048dca1fef699b611</sys_id><sys_mod_count>1</sys_mod_count><sys_name>wait_condition</sys_name><sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package><sys_policy/><sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope><sys_update_name>sys_ui_policy_action_956a97c02fe64d1048dca1fef699b611</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2022-03-25 18:24:32</sys_updated_on><table>x_58056_rf_activity</table><ui_policy display_value="Type is Condition">78e45b482fa64d1048dca1fef699b6f0</ui_policy><visible>true</visible></sys_ui_policy_action></record_update>]]></payload>
+        <payload_hash>2117943853</payload_hash>
+        <record_name>wait_condition</record_name>
+        <reverted_from/>
+        <source>05f9cc2307073010e3b2f8ed7c1ed0bf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-25 18:24:32</sys_created_on>
+        <sys_id>10cc93042fe64d1048dca1fef699b676</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17fc252abcd0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-25 18:24:32</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>d4cc93046be64d10875cc627cbfc3475</update_guid>
+        <update_guid_history>d4cc93046be64d10875cc627cbfc3475:2117943853,2a7ad7c0e4e64d10f03eab0945a6846a:374245033</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-03-25 18:40:51</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>8b3c3a23c47b4e82a8462301d9cd0401</sys_id>
+        <sys_metadata>956a97c02fe64d1048dca1fef699b611</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>wait_condition</sys_name>
+        <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+        <sys_parent display_value="Type is Condition">78e45b482fa64d1048dca1fef699b6f0</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_scope_delete display_value="">510635bd480e4d029ce30a63f209a744</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_956a97c02fe64d1048dca1fef699b611</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_956a97c02fe64d1048dca1fef699b611">10cc93042fe64d1048dca1fef699b676</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-03-25 18:40:51</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

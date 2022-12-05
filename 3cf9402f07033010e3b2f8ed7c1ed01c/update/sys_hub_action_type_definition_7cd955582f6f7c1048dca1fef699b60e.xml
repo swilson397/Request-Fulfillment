@@ -2,11 +2,13 @@
     <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
         <access>public</access>
         <acls/>
+        <action_status/>
         <action_template/>
         <active>true</active>
         <annotation/>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
+        <compiler_build/>
         <copied_from/>
         <copied_from_name/>
         <description/>
@@ -55,6 +57,7 @@
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="Manager Approval">7cd955582f6f7c1048dca1fef699b60e</action>
         <cid>da09780c-3df5-4318-9fea-a64976df73ad</cid>
+        <error_handling_type>1</error_handling_type>
         <extended_inputs/>
         <extended_outputs/>
         <icon/>
@@ -208,6 +211,11 @@
         <table>var__m_sys_flow_step_definition_input_a4eb47900b22320085c083eb37673acc</table>
         <value/>
     </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_output_a4eb47900b22320085c083eb37673acc^id=fadbd9d82f6f7c1048dca1fef699b690"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=fadbd9d82f6f7c1048dca1fef699b690"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=fadbd9d82f6f7c1048dca1fef699b690"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=fadbd9d82f6f7c1048dca1fef699b690"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_fadbd9d82f6f7c1048dca1fef699b690"/>
     <sys_hub_action_input action="delete_multiple" query="model=7cd955582f6f7c1048dca1fef699b60e^sys_idNOT IN26dbdd982f6f7c1048dca1fef699b694,e2dbd9d82f6f7c1048dca1fef699b686"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -290,6 +298,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=26dbdd982f6f7c1048dca1fef699b694"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -371,6 +380,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e2dbd9d82f6f7c1048dca1fef699b686"/>
     <sys_hub_action_output action="delete_multiple" query="model=7cd955582f6f7c1048dca1fef699b60e^sys_idNOT INfadbd9d82f6f7c1048dca1fef699b69a"/>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -455,6 +465,10 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=fadbd9d82f6f7c1048dca1fef699b69a"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=fadbd9d82f6f7c1048dca1fef699b69a"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=7cd955582f6f7c1048dca1fef699b60e"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=7cd955582f6f7c1048dca1fef699b60e"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_7cd955582f6f7c1048dca1fef699b60e^sys_idNOT IN22dbd9d82f6f7c1048dca1fef699b685,32dbd9d82f6f7c1048dca1fef699b68e"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>reqitemgr</element>
@@ -502,6 +516,7 @@
         <url/>
         <url_target/>
     </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_7cd955582f6f7c1048dca1fef699b60e"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_7cd955582f6f7c1048dca1fef699b60e^sys_idNOT INf6dbd9d82f6f7c1048dca1fef699b6a0"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>approval_state</element>
@@ -526,6 +541,7 @@
         <url/>
         <url_target/>
     </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_7cd955582f6f7c1048dca1fef699b60e"/>
     <sys_hub_action_plan action="delete_multiple" query="action_id=7cd955582f6f7c1048dca1fef699b60e^sys_idNOT INd4eb1dd82f6f7c1048dca1fef699b6d4"/>
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Manager Approval">7cd955582f6f7c1048dca1fef699b60e</action_id>
@@ -544,6 +560,7 @@
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
         <acls/>
+        <action_status/>
         <action_template/>
         <annotation/>
         <callable_by_client_api>false</callable_by_client_api>
@@ -595,6 +612,7 @@
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="Manager Approval">fbdb1dd82f6f7c1048dca1fef699b64e</action>
         <cid>da09780c-3df5-4318-9fea-a64976df73ad</cid>
+        <error_handling_type>1</error_handling_type>
         <extended_inputs/>
         <extended_outputs/>
         <icon/>
@@ -748,6 +766,11 @@
         <table>var__m_sys_flow_step_definition_input_a4eb47900b22320085c083eb37673acc</table>
         <value/>
     </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_output_a4eb47900b22320085c083eb37673acc^id=3fdb1dd82f6f7c1048dca1fef699b665"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=3fdb1dd82f6f7c1048dca1fef699b665"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=3fdb1dd82f6f7c1048dca1fef699b665"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=3fdb1dd82f6f7c1048dca1fef699b665"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_3fdb1dd82f6f7c1048dca1fef699b665"/>
     <sys_hub_action_input action="delete_multiple" query="model=fbdb1dd82f6f7c1048dca1fef699b64e^sys_idNOT IN3fdb1dd82f6f7c1048dca1fef699b651,b7db1dd82f6f7c1048dca1fef699b65b"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -830,6 +853,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3fdb1dd82f6f7c1048dca1fef699b651"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -911,6 +935,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b7db1dd82f6f7c1048dca1fef699b65b"/>
     <sys_hub_action_output action="delete_multiple" query="model=fbdb1dd82f6f7c1048dca1fef699b64e^sys_idNOT IN8ceb1dd82f6f7c1048dca1fef699b66c"/>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -995,6 +1020,10 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8ceb1dd82f6f7c1048dca1fef699b66c"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=8ceb1dd82f6f7c1048dca1fef699b66c"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=fbdb1dd82f6f7c1048dca1fef699b64e"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=fbdb1dd82f6f7c1048dca1fef699b64e"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_fbdb1dd82f6f7c1048dca1fef699b64e^sys_idNOT INf3db1dd82f6f7c1048dca1fef699b65a,f3db1dd82f6f7c1048dca1fef699b663"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>reqitemgr</element>
@@ -1042,6 +1071,7 @@
         <url/>
         <url_target/>
     </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_fbdb1dd82f6f7c1048dca1fef699b64e"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_fbdb1dd82f6f7c1048dca1fef699b64e^sys_idNOT IN40eb1dd82f6f7c1048dca1fef699b672"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>approval_state</element>
@@ -1066,6 +1096,7 @@
         <url/>
         <url_target/>
     </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_fbdb1dd82f6f7c1048dca1fef699b64e"/>
     <sys_hub_action_type_definition action="update">
         <sys_id>7cd955582f6f7c1048dca1fef699b60e</sys_id>
         <latest_snapshot>fbdb1dd82f6f7c1048dca1fef699b64e</latest_snapshot>

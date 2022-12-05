@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>integration</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-14 00:53:19</sys_created_on>
+        <sys_id>029a51ff07c73010e3b2f8ed7c1ed0e6</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>integration</sys_name>
+        <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name>sys_ui_policy_action_029a51ff07c73010e3b2f8ed7c1ed0e6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-14 00:56:03</sys_updated_on>
+        <table>x_58056_rf_activity</table>
+        <ui_policy display_value="Type is Integration">0a9a51ff07c73010e3b2f8ed7c1ed0e3</ui_policy>
+        <visible>ignore</visible>
+    </sys_ui_policy_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</application>
+        <file_path/>
+        <instance_id>2570b4f36f4fb1006626a9cc5d3ee464</instance_id>
+        <instance_name>dev12292</instance_name>
+        <name>sys_ui_policy_action_029a51ff07c73010e3b2f8ed7c1ed0e6</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>ignore</disabled><field>integration</field><mandatory>true</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2021-10-14 00:53:19</sys_created_on><sys_id>029a51ff07c73010e3b2f8ed7c1ed0e6</sys_id><sys_mod_count>1</sys_mod_count><sys_name>integration</sys_name><sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package><sys_policy/><sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope><sys_update_name>sys_ui_policy_action_029a51ff07c73010e3b2f8ed7c1ed0e6</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2021-10-14 00:56:03</sys_updated_on><table>x_58056_rf_activity</table><ui_policy display_value="Type is Integration">0a9a51ff07c73010e3b2f8ed7c1ed0e3</ui_policy><visible>ignore</visible></sys_ui_policy_action></record_update>]]></payload>
+        <payload_hash>176026516</payload_hash>
+        <record_name>integration</record_name>
+        <reverted_from/>
+        <source>05f9cc2307073010e3b2f8ed7c1ed0bf</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-14 00:56:03</sys_created_on>
+        <sys_id>9a3b99ff07c73010e3b2f8ed7c1ed07d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>17c7c4c8c3e0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-14 00:56:03</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>d23b99fff5c7301085d2263d52599d7d</update_guid>
+        <update_guid_history>d23b99fff5c7301085d2263d52599d7d:176026516,4e9a51ff49c73010011d48f5acdeb9e7:1875497838</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-14 22:46:47</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>824f35573a9e4828a9c1c368e5382410</sys_id>
+        <sys_metadata>029a51ff07c73010e3b2f8ed7c1ed0e6</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>integration</sys_name>
+        <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+        <sys_parent display_value="Type is Integration">0a9a51ff07c73010e3b2f8ed7c1ed0e3</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_scope_delete display_value="">510635bd480e4d029ce30a63f209a744</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_029a51ff07c73010e3b2f8ed7c1ed0e6</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_029a51ff07c73010e3b2f8ed7c1ed0e6">9a3b99ff07c73010e3b2f8ed7c1ed07d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-14 22:46:47</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

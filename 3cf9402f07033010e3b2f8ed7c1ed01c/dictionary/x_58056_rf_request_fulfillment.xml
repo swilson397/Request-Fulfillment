@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Request Fulfillment" max_length="40" name="x_58056_rf_request_fulfillment" sizeclass="4" type="collection">
+        <element default="true" label="Active" max_length="40" name="active" type="boolean"/>
+        <element attributes="encode_utf8=false" label="Catalog item" max_length="32" name="catalog_item" reference="sc_cat_item" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Display name" max_length="100" name="display_name" read_only="true" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Short description" max_length="100" name="short_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="main" label="Fullfillment Type" mandatory="true" max_length="40" name="type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Main" sequence="0" value="main"/>
+                <element inactive_on_update="false" label="Integration" sequence="1" value="integration"/>
+                <element inactive_on_update="false" label="Subprocess" sequence="2" value="subprocess"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="catalog_item"/>
+        </index>
+    </element>
+</database>
