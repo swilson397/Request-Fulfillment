@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload.demo</directory>
+        <documentkey>c243d02f07073010e3b2f8ed7c1ed0c1</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_58056_rf_request_fulfillment">
+    <x_58056_rf_request_fulfillment action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <catalog_item display_value="Firewall Rule Change">67e2f2da4fff0200086eeed18110c7dd</catalog_item>
+        <display_name>Main flow: Firewall Rule Change</display_name>
+        <short_description/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-13 01:03:23</sys_created_on>
+        <sys_id>c243d02f07073010e3b2f8ed7c1ed0c1</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-10-15 00:20:15</sys_updated_on>
+        <type>main</type>
+    </x_58056_rf_request_fulfillment>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-12-05 22:20:15</sys_created_on>
+        <sys_id>6f10e1de2fe7991448dca1fef699b6e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Main flow: Firewall Rule Change</sys_name>
+        <sys_package display_value="Request Fulfillment" source="x_58056_rf">3cf9402f07033010e3b2f8ed7c1ed01c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Request Fulfillment">3cf9402f07033010e3b2f8ed7c1ed01c</sys_scope>
+        <sys_update_name>sys_metadata_link_6f10e1de2fe7991448dca1fef699b6e7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-12-05 22:20:15</sys_updated_on>
+        <tablename>x_58056_rf_request_fulfillment</tablename>
+    </sys_metadata_link>
+</record_update>
